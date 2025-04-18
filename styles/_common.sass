@@ -147,6 +147,8 @@ svg
     cursor: pointer !important
 .container
     @include container
+    border-left: 1px solid $black
+    border-right: 1px solid $black
 .container-fluid
     padding: 0 var(--containerfluid)
     display: block
@@ -224,10 +226,6 @@ h3
             font-size: 14px
         @include media(345)
             font-size: 13px
-    &:not(.c-white)
-        h6,p
-            color: $text
-            @include font(500)
     &.lh-1
         h3,h2
             line-height: 1
@@ -995,6 +993,11 @@ button
     @include media(675)
         grid-template-columns: 100%
 
+@for $col from 1 through 12
+  .grid-#{$col} 
+    display: grid
+    grid-template-columns: repeat(#{$col}, 1fr)
+
 .slider-section
     .upper-sec
         position: relative
@@ -1149,6 +1152,9 @@ button
     @include media(540)
         padding: 40px 0 50px
 
+.sec-padd-all
+    padding: 70px 40px 90px
+
 .bg-circle
     @include bgCircleBlur
 
@@ -1174,3 +1180,6 @@ button
     100%
         opacity: 0.5
         transform: scale(0.8)
+
+.highlight
+    color: var(--primary)

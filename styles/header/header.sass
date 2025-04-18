@@ -91,14 +91,14 @@ header
                             position: absolute
                             background: white
                             top: 100%
-                            left: 0
-                            right: 0
+                            left: 50%
+                            translate: -50% 0
                             transform: perspective(2000px) translate3d(0px, 0px, 50px) rotateX(-90deg) scale3d(0.86, 0.75, 1) translateY(50px)
                             transform-origin: top
                             transition: .4s ease
                             opacity: 0
                             width: 100%
-                            min-width: fit-content
+                            max-width: var(--container)
                             .dropdown-menu-wrap
                                 height: 100%
                                 width: 100%
@@ -139,11 +139,11 @@ header
                                                 top: 0
                                                 left: var(--leftwidth)
                                                 width: calc( 100% - var(--leftwidth) )
-                                                height: 100%
                                                 background-color: $white
                                                 padding: 40px 30px
                                                 transition: .5s ease
                                                 display: none
+                                                border-bottom: 2px solid #000
                                                 .col-subgrid
                                                     display: grid
                                                     grid-template-columns: repeat(5, 1fr)

@@ -599,6 +599,8 @@ svg path {
   max-width: var(--container);
   width: 100%;
   margin: 0 auto;
+  border-left: 1px solid var(--black);
+  border-right: 1px solid var(--black);
 }
 @media only screen and (max-width: 1300px) {
   .container {
@@ -772,10 +774,6 @@ h3 {
   .heading p {
     font-size: 13px;
   }
-}
-.heading:not(.c-white) h6, .heading:not(.c-white) p {
-  color: var(--text);
-  font-weight: 500;
 }
 .heading.lh-1 h3, .heading.lh-1 h2 {
   line-height: 1;
@@ -1871,6 +1869,66 @@ button {
   }
 }
 
+.grid-1 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.grid-7 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.grid-8 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.grid-9 {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.grid-10 {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.grid-11 {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
 .slider-section .upper-sec {
   position: relative;
   margin-bottom: 4rem;
@@ -2086,6 +2144,10 @@ button {
   }
 }
 
+.sec-padd-all {
+  padding: 70px 40px 90px;
+}
+
 .bg-circle {
   position: relative;
   --bgcolor: rgb(256 256 256);
@@ -2139,4 +2201,7 @@ button {
     opacity: 0.5;
     transform: scale(0.8);
   }
+}
+.highlight {
+  color: var(--primary);
 }/*# sourceMappingURL=global.css.map */
