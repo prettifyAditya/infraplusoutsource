@@ -864,7 +864,7 @@ h6 {
   gap: 0 var(--gap);
 }
 
-img {
+img, video {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1039,7 +1039,8 @@ button {
   --height: 38px;
   --padding: 20px;
   height: var(--height);
-  width: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
   position: relative;
   transition: 0.5s ease;
 }
