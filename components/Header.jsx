@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import "../styles/header/header.css"
 import { useEffect } from "react"
+import Hamburger from "./Hamburger";
+import EnquirePop from "./EnquirePop";
 
 export default function Header() {
 
@@ -268,14 +270,22 @@ export default function Header() {
                                 </div>
                             </li>
                             <li>
-                                <button type="button" className="btn-btn">
+                                <button type="button" className="btn-btn" onClick={() => {
+                            document.querySelector('.enquire-pop').classList.add('is-open')
+                            document.querySelector('.overlay').classList.add('is-open')
+                            document.querySelector('body').classList.add('overflow-hidden')
+                        }}>
                                     <span type="button">
                                         Enquire Now
                                     </span>
                                 </button>
                             </li>
                             <li>
-                                <button type="button" className="ham-btn" aria-label="Open Mobile Menu">
+                                <button type="button" className="ham-btn" aria-label="Open Mobile Menu" onClick={() => {
+                                    document.querySelector('.ham-pop').classList.add('is-open')
+                                    document.querySelector('.overlay').classList.add('is-open')
+                                    document.querySelector('body').classList.add('overflow-hidden')
+                                }}>
                                     <span></span>
                                     <span></span>
                                     <span></span>
@@ -285,6 +295,8 @@ export default function Header() {
                     </div>
                 </div>
             </header>
+            <Hamburger />
+            <EnquirePop />
         </>
     )
 }

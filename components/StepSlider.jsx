@@ -70,7 +70,9 @@ export default function StepSlider({ title, desc}) {
                         </div>
                         <div className="steps">
                           <h6>{title}</h6>
-                          <p>{desc}</p>
+                          <div className="scroll">
+                            <p>{desc}</p>
+                          </div>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -86,7 +88,9 @@ export default function StepSlider({ title, desc}) {
                         </div>
                         <div className="steps">
                           <h6>{title}</h6>
-                          <p>{desc}</p>
+                          <div className="scroll">
+                            <p>{desc}</p>
+                          </div>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -102,7 +106,9 @@ export default function StepSlider({ title, desc}) {
                         </div>
                         <div className="steps">
                           <h6>{title}</h6>
-                          <p>{desc}</p>
+                          <div className="scroll">
+                            <p>{desc}</p>
+                          </div>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -118,7 +124,9 @@ export default function StepSlider({ title, desc}) {
                         </div>
                         <div className="steps">
                           <h6>{title}</h6>
-                          <p>{desc}</p>
+                          <div className="scroll">
+                            <p>{desc}</p>
+                          </div>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -134,7 +142,9 @@ export default function StepSlider({ title, desc}) {
                         </div>
                         <div className="steps">
                           <h6>{title}</h6>
-                          <p>{desc}</p>
+                          <div className="scroll">
+                            <p>{desc}</p>
+                          </div>
                         </div>
                     </div>
                 </SwiperSlide>

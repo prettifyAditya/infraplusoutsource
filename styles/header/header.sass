@@ -160,21 +160,6 @@ header
                                                             margin-bottom: 20px
                                                         p
                                                             color: $black
-
-
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
                             // ul
                             //     background: #fff
                             //     padding: 16px 12px
@@ -415,60 +400,68 @@ header
 
 
 footer
-    @include media(540)
-        margin-bottom: var(--footerstrip)
-    .call-to-action
-        width: 100%
-        background: var(--gradient-a)
-        padding: 15px 25px
-        align-items: center
-        @include media(991)
-            flex-direction: column
-            gap: 25px
-        @include media(540) 
-            padding: 35px
-        .colA
-            flex: 1
-            display: flex
-            align-items: center
-            @include media(540)     
-                flex-direction: column
-                width: 100%
-                align-items: start
-                gap: 10px
-            .action
-                display: flex
-                gap: 10px
-                padding: 0 30px
-                @include media(768) 
-                    gap: 6px
-                    padding: 0 10px
-                    flex: 1
-                @include media(540)     
-                    gap: 12px
+    .container
+        padding-bottom: 20px
+    .upper-footer
+        border-top: 1px solid #000
+        border-bottom: 1px solid #000
+        .nav-list
+            li.hasDropdown
+                flex: 1
+                position: relative
+                padding: 10px 5px 10px 20px
+                border-right: 1px solid #000
+                &:last-child
+                    border-right: none
                 &:first-child
-                    padding-left: 0
-                    @include media(540) 
-                        padding-left: 10px
-                &:not(:last-child)
-                    border-right: 1px solid $white
-                    @include media(540)     
-                        border-right: none
-                .contact
-                    h6
-                        font-family: $ttrg-bd
-                        font-size: 18px
-                        color: $white
-                        line-height: 1
-                        @include media(768) 
-                            font-size: 16px
-                    a
-                        color: $white
-        .colB
-            flex: 0 1 auto
-            display: flex
-            align-items: center
-            gap: 15px
+                    border-left: none
+                .plus-icon
+                    position: absolute
+                    right: 20px
+                    top: 22px
+                    --sizeplus: 17px
+                    height: var(--sizeplus)
+                    width: var(--sizeplus)
+                    &.active
+                        &::after
+                            transform: rotate(0deg)
+                            opacity: 0
+                    &::before, &::after
+                        content: ""
+                        position: absolute
+                        left: 0
+                        top: 0
+                        width: 100%
+                        height: 2px
+                        background: $black
+                        transition: .5s ease
+                    &::after
+                        transform: rotate(90deg)
+                >a
+                    font-size: 16px
+                    font-weight: 700    
+                .footer-dropdown-menu
+                    max-height: 0px
+                    opacity: 0
+                    pointer-events: none
+                    overflow: hidden
+                    transition: max-height .5s ease, opacity .4s ease
+                    &.active
+                        max-height: 400px
+                        opacity: 1
+                        pointer-events: auto
+                    ul
+                        padding: 10px 0 10px 5px
+                        li
+                            font-size: 15px
+                            transition: .5s ease
+                            &:hover
+                                padding-left: 5px
+                                a
+                                    color: $black
+                            a
+                                color: $text
+                                transition: .5s ease
     .main-footer
         padding: 50px 25px 80px
         display: flex
@@ -478,19 +471,19 @@ footer
         @include media(540)     
             padding: 30px 15px 50px
         .colA
-            flex: 0 1 auto
+            flex: 0 1 20%
             @include media(991)
                 margin: 0 auto 20px
             @include media(540)     
                 margin: 0 auto
             img
+                width: 170px
                 @include media(991)
                     height: 100%
                     object-fit: contain
         .colB
             flex: 1
             display: flex
-            gap: 20px
             padding: 0 40px
             @include media(991)
                 padding: 0 20px
@@ -505,31 +498,30 @@ footer
                 h6
                     font-size: 18px
                     line-height: 1.2
-                    font-family: $ttrg-bd
+                    font-weight: 700
                     margin-bottom: 15px
-                ul
-                    li
+                >ul
+                    &.connect
+                        li
+                            margin-bottom: 15px
+                    >li
+                        display: flex
+                        gap: 10px
                         a
                             font-size: 16px
                             color: $text
                             transition: .5s ease
                             padding-bottom: 5px
+                            flex: 0 1 100%
                             &:hover
                                 color: $black
                                 padding-left: 5px
-                &:last-child
-                    flex: 0 1 40%
-                    @include media(540)     
-                        flex: 1
-                        margin-top: 20px
-                    a
-                        display: flex
-                        gap: 5px
                         svg
-                            flex: 0 1 50px
+                            width: 30px
+                            height: 35px
 
         .colC
-            flex: 0 1 auto
+            flex: 0 1 20%
             .social-icons
                 display: flex
                 align-items: center
@@ -538,8 +530,9 @@ footer
                     justify-content: center
 
     .bottom-footer
-        padding: 30px 25px 40px
-        border-top: 1px solid #CCCCCC
+        padding: 20px 25px 
+        border-top: 1px solid #000
+        border-bottom: 1px solid #000
         display: flex
         justify-content: space-between
         width: 100%
@@ -555,18 +548,16 @@ footer
                 img
                     width: 80px
                     padding-left: 10px
-
 .ham-pop
     right: 0
     max-width: 480px
-    background: linear-gradient(180deg, #d4f9f9 2%, #fff 89%)
+    background: linear-gradient(180deg, #ffbca2 2%, #fff 89%)
     transform: translateX(100%)
     transition: .5s ease
     &.is-open
         transform: translateX(0%)
     .close
         path
-            stroke: $text !important
             stroke-width: 2 !important
     .model-body
         padding: 75px 40px 30px
@@ -574,7 +565,7 @@ footer
         overflow-y: auto
         display: flex
         flex-direction: column
-        background: url(/assets/icon/infra-icon.svg) no-repeat
+        background: url(/assets/icon/infra-icon.png) no-repeat
         background-position-x: 90%
         background-position-y: 80%
         background-size: 100px
@@ -600,7 +591,6 @@ footer
                     line-height: 1.06
                     padding: 10px 0  
                     color: $black
-                    font-family: $ttrg-bd
                     display: block
                     @include font(500)
                     @include media(1366)
@@ -608,7 +598,7 @@ footer
                     @include media(675)
                         font-size: 24px
                     &:hover
-                        color: #1a9aa9
+                        color: var(--primary)
                         padding-left: 5px
                         
         .bottom-list
@@ -663,7 +653,8 @@ footer
     &.is-open
         transform: translateX(0%)
     .model-body
-        padding: 60px 35px 30px
+        margin-top: 60px
+        padding: 0px 35px 30px
         height: 100%
         overflow-y: auto
         @include scrollbar(3px,$white,#5e5e5e,8px)
@@ -675,7 +666,6 @@ footer
             h4
                 font-size: 32px
                 color: $black
-                font-family: $ttrg-bd
                 @include font(500)
             p
                 color: $text
@@ -689,8 +679,10 @@ footer
                     font-size: 14px
                     max-width: 300px
         .form
-            --gaptb: 15px
-
+            --gaptb: 20px
+            --item: 1
+        .btn-btn
+            margin: 20px auto 0
 .video-pop
     left: 0
     right: 0

@@ -141,7 +141,7 @@
 
 .col-3d
     --borderwidth: 27px
-    --bordercolor: #cbcbcb 
+    --bordercolor: #000
     --borderheight: 1px
     position: relative
     overflow: hidden
@@ -179,7 +179,7 @@
         transform: translate(calc(var(--borderwidth) * -1), var(--borderwidth))
         position: relative
         transition: 0.5s ease
-        border-bottom: var(--borderheight) solid var(--bordercolor)
+        // border-bottom: var(--borderheight) solid var(--bordercolor)
         &::before, &::after
             content: ""
             position: absolute
@@ -214,13 +214,162 @@
                 background: var(--bordercolor)
                 transform: rotate(45deg)
                 transform-origin: bottom
-            figure
-                position: relative
+            .figure
                 display: block
                 line-height: 0
                 overflow: hidden
-                @include before(linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%))
+                clip-path: polygon(100% 0%, 100% 100%, 8% 100%, 0% 86%, 0 0)
+                @include before(linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0 0 0 / 50%) 100%))
                 img
                     width: 100%
                     transition: .5s ease
                     line-height: 0
+            figcaption
+                position: absolute
+                bottom: 10%
+                left: 10%
+                padding: 0 40px 20px
+                p
+                    font-size: 18px
+                    color: $white
+                    line-height: 1.2
+                    font-weight: 800
+
+
+.col-3d-right
+    --borderwidth: 90px
+    --bordercolor: #000
+    --borderheight: 1px
+    position: relative
+    overflow: hidden
+    padding: 0 var(--borderwidth) var(--borderwidth) 0
+    &:hover
+        .card-wrap
+            transform: translate(0, 0)
+            &::before, &::after
+                width: 0
+            &::before
+                left: 0
+            &::after
+                right: 0
+    &::before, &::after
+        content: ""
+        position: absolute
+        bottom: 100%
+        pointer-events: none
+        -webkit-user-select: none
+        -moz-user-select: none
+        user-select: none
+        background: var(--bordercolor)
+        transition: 0.5s ease
+    &::before
+        width: calc(100% - var(--borderwidth))
+        height: var(--borderheight)
+        top: 0
+        left: 0
+    &::after
+        height: calc(100% - var(--borderwidth))
+        width: var(--borderheight)
+        top: 0
+        left: 0
+    .card-wrap
+        transform: translate(var(--borderwidth), var(--borderwidth))
+        position: relative
+        transition: 0.5s ease
+        // border-bottom: var(--borderheight) solid var(--bordercolor)
+        &::before, &::after
+            content: ""
+            position: absolute
+            bottom: 100%
+            pointer-events: none
+            -webkit-user-select: none
+            -moz-user-select: none
+            user-select: none
+            width: var(--borderheight)
+            height: 100%
+            background: var(--bordercolor)
+            transform: rotate(316deg)
+            transform-origin: bottom
+            transition: 0.5s ease
+        &::before
+            left: 0
+        &::after
+            right: 0
+        .card
+            position: relative
+            &::before
+                content: ""
+                position: absolute
+                bottom: 0
+                left: 0
+                pointer-events: none
+                -webkit-user-select: none
+                -moz-user-select: none
+                user-select: none
+                width: var(--borderheight)
+                height: 100%
+                background: var(--bordercolor)
+                transform: rotate(314deg)
+                transform-origin: bottom
+            .figure
+                display: block
+                line-height: 0
+                overflow: hidden
+                img, video
+                    width: 100%
+                    transition: .5s ease
+                    line-height: 0
+
+
+.formComWrapper
+    .flex
+        align-items: center
+        gap: 100px
+        .colA
+            flex: 0 1 40%
+            display: flex
+            justify-content: center
+            .form-3d
+                width: 300px
+                height: 410px
+                &:hover
+                    .card-wrap
+                        transform: translate(0)
+                .card-wrap, .card, .figure, video
+                    width: 100%
+                    height: 100%
+                .card-wrap
+                    transform: translate(var(--borderwidth), calc( var(--borderwidth) * 0.3  ))
+                    &::before, &::after
+                        transform: rotate(286deg)
+                    .card
+                        &::before
+                            transform: rotate(287deg)
+                video
+                    filter: grayscale(1)
+                
+                        
+        .colB
+            flex: 1
+            .title
+                padding: 40px 0
+                h2
+                    font-size: 36px
+                    line-height: 1.3
+                    font-weight: 700
+                    max-width: 297px
+                    padding-bottom: 10px
+                p
+                    color: $black
+
+.form-grid
+    --item: 2
+    --gaplr: 20px
+    --gaptb: 20px  
+    --textareaheight: 60px
+    &.full_width
+        --item: 1
+    .btn-wrap
+        margin-top: 20px
+        button
+            border-radius: 5px

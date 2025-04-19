@@ -1,6 +1,6 @@
-export default function ButtonMain({ desc }) {
+export default function ButtonMain({ desc = "Enquire now", className= "" }) {
     return(
-        <button className="btn-btn">
+        <button className={`btn-btn ${className}`}>
             <span type="button">
             {desc}
             </span>
