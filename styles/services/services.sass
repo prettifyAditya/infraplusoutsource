@@ -1,108 +1,77 @@
 @import '../_var'
-section.border-sec
-    @include media(991) 
-        padding-left: 40px
-    @include media(540)
-        padding-left: 25px
+.services-secA
     .container
-        --container: 1200px
-        border-left: 2px dotted #666
-        @include media(1024) 
-            --container: 900px
-        // @include media(991) 
-        //     border-left: none
-        .services-secA
-            padding-top: 70px
-            @include media(991) 
-                padding-top: 60px
-            @include media(768)
-                padding-top: 50px 
-            @include media(540)
-                padding-top: 40px 
-            .heading
-                text-align: center
-                p  
-                    max-width: 764px
-                    margin: 0 auto
-                    color: $black
-        .services-secB
-            .step-count
-                padding: 70px 0
-                width: 100%
-                margin-left: -25px
-                @include media(1024) 
-                    padding: 0 0 70px
-                    margin-left: -50px
-                @include media(768)
-                    padding: 0 0 60px
-                    margin-left: -35px
-                @include media(540)
-                    padding: 0 0 30px 
-                .heading
-                    display: flex
-                    gap: 20px
-                    @include media(540)
-                        gap: 10px
-                    span
-                        display: inline-block
-                        padding: 8px 
-                        color: $black
-                        font-size: 24px
-                        line-height: 1.2
-                        font-family: $ttrg-bd
-                        border: 2px dotted $black
-                        border-radius: 50%
-                        background: $white
-                        @include media(540)
-                            font-size: 16px
+        border-bottom: 1px solid $black
+        .heading
+            max-width: 663px
+            margin: 0 auto 
+            p
+                color: $text
+        .services-container
+            padding: 50px 0 
+            grid-gap: 20px
+            .service-item
+                background-color: #F5F5F5
+                border: 1px solid $text
+                border-radius: 10px
+                padding: 30px 20px
+                display: flex
+                gap: 20px
+                img
+                    width: 45px
+                    height: 45px
+                .content
+                    text-align: left
                     h6
-                        font-size: 24px
-                        line-height: 1.2
-                        font-family: $ttrg-bd
-                        color: $black
-                        @include media(540)
-                            font-size: 20px
-                .step-details
-                    padding-left: 70px
-                    gap: 50px
-                    @include media(1024) 
-                        gap: 20px
-                    @include media(991) 
-                        flex-direction: column
-                        align-items: start
-                    @include media(540)
-                        padding-left: 48px
-                    .colA
-                        img
-                            width: 100%
-                            object-fit: cover
-                    .colB
-                        ul
-                            padding-left: 25px
-                            @include media(540)
-                                padding-left: 10px
-                            li
-                                position: relative
-                                padding-bottom: 5px
-                                color: $black
-                                &::before
-                                    content: ""
-                                    position: absolute
-                                    left: -20px
-                                    bottom: 12px
-                                    width: 10px
-                                    height: 10px
-                                    background-color: var(--primary)
-                                    border-radius: 50%
-                                    @include media(540)
-                                        width: 7px
-                                        height: 7px
-                        .btn-wrapper
-                            margin-top: 50px
-                            display: flex
-                            align-items: center
-                            gap: 20px
-                            @include media(540)
-                                margin-top: 20px
-                                gap: 10px
-                    
+                        font-size: 18px
+                        font-weight: 600
+                        padding-bottom: 10px
+                    p
+                        font-size: 15px
+                        line-height: 1.3
+                        letter-spacing: .7px
+                        color: $text
+                        padding-bottom: 15px
+                    .more_a
+                        display: flex
+                        align-items: center
+                        gap: 7px
+                        font-weight: 700
+                        svg
+                            transition: .5s ease
+                        &:hover
+                            svg
+                                transform: translateX(5px)
+
+.services-secB
+    .container
+        border-bottom: 1px solid $black
+        .heading
+            max-width: 580px
+            margin: 0 auto 
+            p
+                color: $text
+        .process-wrapper
+            .process-slider
+                padding: 50px 0 70px
+            .btn-wrap
+                position: relative
+                display: flex
+                align-items: center
+                justify-content: center
+                gap: 20px
+                .swiper-nav
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    gap: 10px
+                    button
+                        display: inline-block
+                        width: 40px
+                        height: 40px
+                        border: 1px solid $black
+                        border-radius: 50%
+                        svg
+                            vertical-align: middle
+                            width: 30px
+                            height: 30px

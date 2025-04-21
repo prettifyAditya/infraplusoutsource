@@ -1,7 +1,4 @@
 @import ../_common
-body
-    height: 200vh
-
 header
     position: fixed
     top: 0
@@ -10,7 +7,7 @@ header
     z-index: 5
     transition: .5s ease
     height: var(--headerheight)
-    @include after(var(--gradient-a))
+    @include after($white)
     @include media(768)   
         height: 100px
     @include media(540)
@@ -45,8 +42,10 @@ header
             display: flex
             align-items: center
             flex: 0 1 auto
+            padding: var(--headerpadding) 15px var(--headerpadding) 0
             a.logo
-                padding: var(--headerpadding) 15px var(--headerpadding) 0
+                padding-right: 20px
+                border-right: 1px solid #000
                 height: 100%
                 @include media(540)
                     padding: 10px 0
@@ -59,16 +58,35 @@ header
                 cursor: default
                 user-select: none
                 padding-left: 15px
-                border-left: 1px solid $black
+                // border-left: 1px solid $black
+                // position: relative
                 transition: .5s ease
-                li
+                // &::before
+                //     content: ""
+                //     width: 1px
+                //     height: 10px
+                //     left: 0
+                //     top: 0
+                //     position: absolute
+                //     background-color: #000
+                >li
                     display: inline-block
                     vertical-align: middle
+                    max-width: 100px
                     line-height: 1
                     padding: var(--headerpadding) 0
                     &.hasDropdown
                         >a
                             position: relative
+                            &::before
+                                content: ""
+                                width: 100%
+                                height: 3px
+                                position: absolute
+                                left: 0
+                                bottom: -36px
+                                background: var(--gradient-a)
+                                opacity: 0
                             &::after
                                 transition: .5s ease
                                 content: ""
@@ -77,13 +95,18 @@ header
                                 background-position-x: 100%
                                 background-position-y: 50%
                                 background-size: var(--arrowsize) auto
-                                padding-right: calc(var(--arrowsize) + var(--space))
+                                padding-left: calc(var(--arrowsize) + var(--space))
+                                position: absolute
+                                right: -45px
+                                width: fit-content
+                                height: 100%
+                                top: 0
                         &:hover
                             >a
-                                color: var(--elementhover)
-                                position: relative
+                                &::before
+                                    opacity: 1
                                 &::after
-                                    transform: rotate(90deg)
+                                    transform: rotate(180deg)
                             .dropdown-menu 
                                 opacity: 1
                                 transform: scale3d(1, 1, 1) 
@@ -98,15 +121,17 @@ header
                             transition: .4s ease
                             opacity: 0
                             width: 100%
-                            max-width: var(--container)
+                            max-width: calc(var(--container) - 2px)
                             .dropdown-menu-wrap
-                                height: 100%
+                                height: 80vh
                                 width: 100%
                                 --leftwidth: 25%
                                 --ulpadding: 15px 10px 20px
+                                border-top: 1px solid #000
                                 .colA-md
                                     flex: 1
                                     width: 100%
+                                    height: 100%
                                     position: relative
                                     background-color: #F0F0F0
                                     .subcat-ul
@@ -114,9 +139,11 @@ header
                                         height: 100%
                                         overflow-x: auto
                                         padding: 20px 0 
-                                        .subcat-li
+                                        border-bottom: 1px solid #000
+                                        >.subcat-li
                                             width: 100%
                                             padding: 10px 20px
+                                            text-align: left
                                             &:hover
                                                 background: var(--gradient-a)
                                                 a
@@ -139,11 +166,12 @@ header
                                                 top: 0
                                                 left: var(--leftwidth)
                                                 width: calc( 100% - var(--leftwidth) )
+                                                height: 80vh
                                                 background-color: $white
                                                 padding: 40px 30px
                                                 transition: .5s ease
                                                 display: none
-                                                border-bottom: 2px solid #000
+                                                border-bottom: 1px solid #000
                                                 .col-subgrid
                                                     display: grid
                                                     grid-template-columns: repeat(5, 1fr)
@@ -153,6 +181,7 @@ header
                                                         width: 100%
                                                         padding: var(--ulpadding)
                                                         border: 1px solid $black
+                                                        text-align: center
                                                         border-radius: 5px
                                                         img
                                                             width: 30px
@@ -366,27 +395,27 @@ header
             height: 50px
         &::after
             height: 100%
-        .header-wrapper
-            .colA
-                ul
-                    border-color: var(--white)
-                    li, li.hasDropdown
-                        a
-                            color: var(--white)
-                            &::after
-                                filter: invert(1)
-            .colB
-                ul
-                    li, li.hasDropdown
-                        border-color: var(--white)
-                        img
-                            filter: invert(1)
-                        span
-                            background-color: var(--white)
-                        a
-                            color: var(--white)
-                            &::after
-                                filter: invert(1)
+        // .header-wrapper
+        //     .colA
+        //         ul
+        //             border-color: var(--white)
+        //             li, li.hasDropdown
+        //                 a
+        //                     color: var(--white)
+        //                     &::after
+        //                         filter: invert(1)
+        //     .colB
+        //         ul
+        //             li, li.hasDropdown
+        //                 border-color: var(--white)
+        //                 img
+        //                     filter: invert(1)
+        //                 span
+        //                     background-color: var(--white)
+        //                 a
+        //                     color: var(--white)
+        //                     &::after
+        //                         filter: invert(1)
     &.header-fit
         transition: 0s
         &::after
@@ -551,7 +580,7 @@ footer
 .ham-pop
     right: 0
     max-width: 480px
-    background: linear-gradient(180deg, #ffbca2 2%, #fff 89%)
+    background: #fff
     transform: translateX(100%)
     transition: .5s ease
     &.is-open
@@ -560,7 +589,7 @@ footer
         path
             stroke-width: 2 !important
     .model-body
-        padding: 75px 40px 30px
+        padding: 75px 0px 30px
         height: 100%
         overflow-y: auto
         display: flex
@@ -582,14 +611,86 @@ footer
         .nav-list
             flex: 1
             >li
-                // &:not(:last-child)
-                //     margin-bottom: 22px
-                    @include media(1366)
-                        margin-bottom: 20px
+                &.hamhasDropdown
+                    position: relative
+                    .more_down
+                        position: absolute
+                        right: 50px
+                        top: 10px
+                        rotate: 90deg
+                        transition: .5s ease
+                        &.active
+                            rotate: 0deg
+                    .hamsubmenu
+                        max-height: 0
+                        opacity: 0
+                        pointer-events: none
+                        overflow: hidden
+                        background: #f9f9f9
+                        transition: max-height .5s ease-in-out, opacity .4s ease-in-out
+                        &::-webkit-scrollbar
+                            display: none
+                        &.active
+                            max-height: 200px
+                            opacity: 1
+                            pointer-events: auto
+                        ul
+                            padding: 0 10px
+                            >li
+                                &.subHasDropdown
+                                    position: relative
+                                    .plus-icon
+                                        position: absolute
+                                        right: 0
+                                        top: 18px
+                                        --sizeplus: 20px
+                                        height: var(--sizeplus)
+                                        width: var(--sizeplus)
+                                        &.active
+                                            &::before
+                                                transform: rotate(0)
+                                                opacity: 0
+                                        &::before, &::after
+                                            content: ""
+                                            position: absolute
+                                            top: 50%
+                                            translate: 0px -50%
+                                            left: 0px
+                                            right: 0px
+                                            height: 2px
+                                            width: 100%
+                                            background: $black
+                                            transition: 0.5s
+                                        &::before
+                                            transform: rotate(90deg)
+                                    .subsubmenu
+                                        max-height: 0
+                                        opacity: 0
+                                        pointer-events: none
+                                        overflow: hidden
+                                        transition: max-height .5s ease-in-out, opacity 0.4s ease-in-out
+                                        &.active
+                                            max-height: 300px
+                                            opacity: 1
+                                            pointer-events: auto
+                                        ul
+                                            padding: 0 10px
+                                            a
+                                                font-size: 16px
+                                                display: block
+
+                                >a
+                                    display: block
+                                    font-size: 20px
+                                    padding: 5px
+                                    color: $text
+                                    transition: .5s ease
+                                    &:hover
+                                        color: $black
                 >a
                     font-size: 28px
                     line-height: 1.06
-                    padding: 10px 0  
+                    padding: 10px 40px
                     color: $black
                     display: block
                     @include font(500)
@@ -599,12 +700,12 @@ footer
                         font-size: 24px
                     &:hover
                         color: var(--primary)
-                        padding-left: 5px
+                        padding-left: 45px
                         
         .bottom-list
             border-top: 1px solid #ccc
             margin-top: 2rem
-            padding-top: 1rem
+            padding: 1rem 40px 0
             display: flex
             align-items: center
             gap: 1rem
@@ -649,7 +750,7 @@ footer
     right: 0
     transform: translateX(100%)
     transition: .5s ease
-    background: $gradient-e
+    background: #fff
     &.is-open
         transform: translateX(0%)
     .model-body

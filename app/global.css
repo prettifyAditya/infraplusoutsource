@@ -403,7 +403,7 @@
 }
 
 :root {
-  --headerpadding: 35px;
+  --headerpadding: 20px;
   --headerheight: 110px;
   --headerfixed: 65px;
   --footerstrip: 66px;
@@ -1467,6 +1467,11 @@ button {
 }
 .swiper-prev.swiper-button-lock, .swiper-next.swiper-button-lock {
   display: none !important;
+}
+
+.swiper-button-disabled {
+  cursor: no-drop;
+  opacity: 0.4;
 }
 
 .play-btn {

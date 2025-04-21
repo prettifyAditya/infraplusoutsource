@@ -2,76 +2,29 @@ import ButtonMain from "../components/ButtonMain"
 import CaseSlider from "../components/CaseSlider"
 import ClientSlider from "../components/ClientSlider"
 import FormComponent from "../components/FormComponent"
+import HeroSection from "../components/HeroSection"
 import ServiceCard from "../components/ServiceCard"
 import StepSlider from "../components/StepSlider"
-import ThreeDCard from "../components/ThreeDCard"
 import WhyChooseAcc from "../components/WhyChooseAcc"
 import "../styles/home/home.css"
 import Image from "next/image"
 
-const WhyQues = [
-  {
-    title: "Reduced Overhead Costs",
-    description: `
-        <p>This is one of the major benefits of outsourcing engineering services to India. Most of the companies outsource engineering services as it helps them to reduce about 30-50% of overhead costs on an average.</p>
-    `
-  },
-  {
-    title: "Free Up Time",
-    description: `
-        <p>This is one of the major benefits of outsourcing engineering services to India. Most of the companies outsource engineering services as it helps them to reduce about 30-50% of overhead costs on an average.</p>
-    `
-},
-  {
-    title: "Less Office Space is Required",
-    description: `
-        <p>This is one of the major benefits of outsourcing engineering services to India. Most of the companies outsource engineering services as it helps them to reduce about 30-50% of overhead costs on an average.</p>
-    `
-},
-  {
-    title: "Access to Complex Services",
-    description: `
-        <p>This is one of the major benefits of outsourcing engineering services to India. Most of the companies outsource engineering services as it helps them to reduce about 30-50% of overhead costs on an average.</p>
-    `
-},
-{
-  title: "Services on As-Need Basis",
-  description: `
-      <p>This is one of the major benefits of outsourcing engineering services to India. Most of the companies outsource engineering services as it helps them to reduce about 30-50% of overhead costs on an average.</p>
-  `
-},
-{
-  title: "Access to 24/7 Support",
-  description: `
-      <p>This is one of the major benefits of outsourcing engineering services to India. Most of the companies outsource engineering services as it helps them to reduce about 30-50% of overhead costs on an average.</p>
-  `
-}
-]
-
 export default function Home() {
   return (
       <main>
-          <div className="home-secA mt-hdr">
-            <div className="container sec-padd-all flex">
-                <div className="colA">
-                  <h2><span className="highlight">Engineering</span> Brilliance Delivered Globally</h2>
-                  <p>Infra Outsourcing Services is a renowned India based organization mainly caters to CAD based designing, 2D drafting, 3D modeling, and drawing.</p>
-                  <button className="btn-btn">
-                    <span type="button">
-                        Get Pricing Instantly
-                    </span>
-                  </button>
-                </div>
-                <div className="colB">
-                  <ThreeDCard className="home_3d" mediaType="video" src="/assets/video/HsecA-banner.mp4" />
-                    {/* <figure>
-                        <video playsInline autoPlay muted loop>
-                          <source src="/assets/video/HsecA-banner.mp4" />
-                        </video>
-                    </figure> */}
-                </div>
-            </div>
-          </div>
+          <HeroSection 
+            heading={
+              <>
+                <span className="highlight">Engineering</span> Brilliance Delivered Globally
+              </>
+            }
+            desc="Infra Outsourcing Services is a renowned India based organization mainly caters to CAD based designing, 2D drafting, 3D modeling, and drawing."
+            cardProps={{
+              className:"home_3d",
+              mediaType:"video",
+              src: "/assets/video/HsecA-banner.mp4"
+            }}
+          />
           <div className="home-secB">
             <div className="container sec-pad">
               <div className="heading">
@@ -326,28 +279,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="home-secE">
-            <div className="container sec-pad">
-              <div className="heading">
-                <h2>Why Choose Us</h2>
-                <p>Infra outsource helps multi-disciplinary engineering teams to scale and grow more profitably</p>
-              </div>
-              <div className="why-wrapper flex">
-                  <div className="colA">
-                    <figure>
-                      <video playsInline autoPlay muted loop>
-                        <source src="/assets/video/HsecE-banner.mp4" />
-                      </video>
-                    </figure>
-                  </div>
-                  <div className="colB">
-                    <div className="Why-choose-wrapper">
-                        <WhyChooseAcc whyQues={WhyQues} />
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div>
+          <WhyChooseAcc />
           <div className="home-secF">
             <div className="container sec-padd-all">
               <div className="heading">

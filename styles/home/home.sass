@@ -34,6 +34,10 @@
             .home_3d
                 width: 500px
                 height: 395px
+                .card-wrap
+                    transform: translate(-27px, 27px)
+                    &::before, &::after
+                        width: var(--borderheight)
                 .card-wrap, .card, .figure, video
                     width: 100%
                     height: 100%
@@ -221,11 +225,12 @@
             .lower-sec
                 width: 512px
                 height: 360px
+                position: relative
                 video
-                    height: 475px
+                    height: 500px
                     position: absolute
                     bottom: -48%
-                    right: 0px
+                    right: -10%
 
 .home-secE
     .container
@@ -296,7 +301,7 @@
                             height: 90%
                             left: 0
                             top: 0
-                            background: url(/assets/images/home/steps-bg.svg) no-repeat
+                            background: url(/assets/images/home/steps_bg.svg) no-repeat
                             background-size: contain
                             z-index: -1
                         .upper-count

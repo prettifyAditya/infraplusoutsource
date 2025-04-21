@@ -53,6 +53,12 @@
   width: 500px;
   height: 395px;
 }
+.home-secA .flex .colB .home_3d .card-wrap {
+  transform: translate(-27px, 27px);
+}
+.home-secA .flex .colB .home_3d .card-wrap::before, .home-secA .flex .colB .home_3d .card-wrap::after {
+  width: var(--borderheight);
+}
 .home-secA .flex .colB .home_3d .card-wrap, .home-secA .flex .colB .home_3d .card, .home-secA .flex .colB .home_3d .figure, .home-secA .flex .colB .home_3d video {
   width: 100%;
   height: 100%;
@@ -213,12 +219,13 @@
 .home-secD .container .colB .lower-sec {
   width: 512px;
   height: 360px;
+  position: relative;
 }
 .home-secD .container .colB .lower-sec video {
-  height: 475px;
+  height: 500px;
   position: absolute;
   bottom: -48%;
-  right: 0px;
+  right: -10%;
 }
 
 .home-secE .container {
@@ -303,7 +310,7 @@
   height: 90%;
   left: 0;
   top: 0;
-  background: url(/assets/images/home/steps-bg.svg) no-repeat;
+  background: url(/assets/images/home/steps_bg.svg) no-repeat;
   background-size: contain;
   z-index: -1;
 }

@@ -450,10 +450,10 @@
 }
 .formComWrapper .flex .colA .form-3d {
   width: 300px;
-  height: 410px;
+  height: 480px;
 }
-.formComWrapper .flex .colA .form-3d:hover .card-wrap {
-  transform: translate(0);
+.formComWrapper .flex .colA .form-3d:hover .card-wrap::before, .formComWrapper .flex .colA .form-3d:hover .card-wrap::after {
+  width: var(--borderheight);
 }
 .formComWrapper .flex .colA .form-3d .card-wrap, .formComWrapper .flex .colA .form-3d .card, .formComWrapper .flex .colA .form-3d .figure, .formComWrapper .flex .colA .form-3d video {
   width: 100%;
@@ -502,4 +502,38 @@
 }
 .form-grid .btn-wrap button {
   border-radius: 5px;
+}
+
+.description-section .flex {
+  border-bottom: 1px solid var(--black);
+}
+.description-section .flex .colA {
+  padding: 40px 50px 40px 40px;
+  border-right: 1px solid var(--black);
+  flex: 0 1 60%;
+}
+.description-section .flex .colA .content p {
+  padding-bottom: 20px;
+}
+.description-section .flex .colB {
+  padding: 60px 50px;
+  flex: 1;
+}
+.description-section .flex .colB .heading {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.description-section .flex .colB .heading h2 {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.description-section .flex .colB .heading p {
+  color: var(--text);
+}
+.description-section .flex .colB .DescForm {
+  --item: 1;
+}
+.description-section .flex .colB .DescForm .btn-wrap {
+  text-align: center;
 }/*# sourceMappingURL=components.css.map */

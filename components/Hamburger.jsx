@@ -1,11 +1,44 @@
 "use client"
 import Link from "next/link"
+import { useEffect } from "react"
 function navigate() {
     document.querySelector('.ham-pop').classList.remove('is-open')
     document.querySelector('.overlay').classList.remove('is-open')
     document.querySelector('body').classList.remove('overflow-hidden')
 }
 export default function Hamburger() {
+    useEffect(() => {
+        const dropdowns = document.querySelectorAll('.hamhasDropdown')
+        const subDropdowns = document.querySelectorAll('.subHasDropdown')
+        const handleSubClick = function(e) {
+            e.stopPropagation()
+            const allSubMenus = this.querySelector('.subsubmenu')
+            const subIcon = this.querySelector('.plus-icon')
+            allSubMenus?.classList.toggle('active')
+            subIcon?.classList.toggle('active')
+        }
+        const handleClick = function() {
+            const allMenus = this.querySelector('.hamsubmenu')
+            const icon = this.querySelector('.more_down')
+            allMenus?.classList.toggle('active')
+            icon?.classList.toggle('active')
+        }
+        subDropdowns.forEach(sublist => {
+            sublist.addEventListener('click', handleSubClick)
+        })
+        dropdowns.forEach(list => {
+            list.addEventListener('click', handleClick)
+        })
+
+        return() => {
+            subDropdowns.forEach(sublist => {
+                sublist.removeEventListener('click', handleSubClick)
+            })
+            dropdowns.forEach(list => {
+                list.removeEventListener('click', handleClick)
+            })
+        } 
+    }, [])
     return (
         <div className="model ham-pop">
             <button className="close" onClick={() => {
@@ -16,19 +49,36 @@ export default function Hamburger() {
             <div className="model-body">
                 <ul className="nav-list">
                     <li>
-                        <Link href="/" onClick={navigate}>Home</Link>
-                    </li>
-                    <li>
                         <Link href="/about-us" onClick={navigate}>About Us</Link>
                     </li>
-                    <li>
-                        <Link href="/sectors" onClick={navigate}>Sectors</Link>
+                    <li className="hamhasDropdown">
+                        <div className="more_down">
+                        <svg xmlns="http://www.w3.org/2000/svg" width={14} height={28} viewBox="0 0 12 24"><defs><path id="weuiArrowOutlined0" fill="#000" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z"></path></defs><use fillRule="evenodd" href="#weuiArrowOutlined0" transform="rotate(-180 5.02 9.505)"></use></svg>
+                        </div>
+                        <Link href="javascript:;">Services</Link>
+                        <div className="hamsubmenu">
+                            <ul>
+                                <li className="subHasDropdown">
+                                    <Link href="javascript:;">Engineering Services</Link>
+                                    <div className="plus-icon"></div>
+                                    <div className="subsubmenu">
+                                        <ul>
+                                            <li><Link href="javascript:;">CAD Conversion Services</Link></li>
+                                            <li><Link href="javascript:;">CAD Conversion Services</Link></li>
+                                            <li><Link href="javascript:;">CAD Conversion Services</Link></li>
+                                            <li><Link href="javascript:;">CAD Conversion Services</Link></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><Link href="javascript:;">Engineering Services</Link></li>
+                                <li><Link href="javascript:;">Engineering Services</Link></li>
+                                <li><Link href="javascript:;">Engineering Services</Link></li>
+                                <li><Link href="javascript:;">Engineering Services</Link></li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
-                        <Link href="/services" onClick={navigate}>Services</Link>
-                    </li>
-                    <li>
-                        <Link href="/projects" onClick={navigate}>Projects</Link>
+                        <Link href="/contact-us" onClick={navigate}>Case Studies</Link>
                     </li>
                     <li>
                         <Link href="/contact-us" onClick={navigate}>Contact Us</Link>
