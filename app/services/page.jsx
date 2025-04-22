@@ -7,6 +7,7 @@ import ButtonMain from "../../components/ButtonMain";
 import FormComponent from "../../components/FormComponent";
 import WhyChooseAcc from "../../components/WhyChooseAcc";
 import ProcessSec from "../../components/ProcessSec";
+import AditionalSec from "../../components/AditionalSec";
 
 export default function Services() {
     return (
@@ -311,8 +312,17 @@ export default function Services() {
             </div>
           </div>
         </div> */}
-        <ProcessSec />
+        <ProcessSec
+          heading="Our Mechanical Engineering Processes"
+          subHeading="To offer the best business benefits to our clients, we adhere to a
+              streamlined and systematic process for our mechanical design
+              services."
+        />
         <WhyChooseAcc />
+        <AditionalSec
+          classname="serviceAdd"
+          heading="Additional Services You Can Benefit From"
+        />
         <FormComponent />
       </main>
     );

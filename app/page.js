@@ -291,19 +291,14 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="home-secG home-secF">
-            <div className="container sec-padd-all">
-              <div className="heading">
-                <h2>Turning Concepts into <span className="highlight">Iconic</span> Creations</h2>
-                <p>Create stunning visual representations from architectural designs to minimize design iterations and accelerate project completion.</p>
-              </div>
-              <CaseSlider />
-              <div className="btn-wrapper flex text-center">
-                <ButtonMain desc="View all case studies" />
-                <ButtonMain desc="Enquire now" />
-              </div>
-            </div>
-          </div>
+            <CaseSlider heading={
+              <>
+                Turning Concepts into <span className="highlight">Iconic</span>
+                Creations
+              </>
+            }
+            subHeading="Create stunning visual representations from architectural designs to
+            minimize design iterations and accelerate project completion." />
           <div className="home-secG home-secF home-secH">
             <div className="container sec-padd-all">
               <div className="heading">

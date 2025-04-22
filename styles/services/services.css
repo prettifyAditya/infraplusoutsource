@@ -66,6 +66,18 @@
   transform: translateX(5px);
 }
 
+.serviceAdd .btn-wrapper {
+  display: none;
+}
+
+.serviceDadd .container {
+  border-bottom: 1px solid var(--black);
+}
+.serviceDadd .btn-wrapper {
+  text-align: center;
+  margin: 50px 0;
+}
+
 .services-secB .container {
   border-bottom: 1px solid var(--black);
 }
@@ -78,6 +90,45 @@
 }
 .services-secB .container .process-wrapper .process-slider {
   padding: 50px 0 70px;
+}
+.services-secB .container .process-wrapper .process-slider .swiper-slide .process-wrap {
+  position: relative;
+}
+.services-secB .container .process-wrapper .process-slider .swiper-slide .process-wrap::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background: url(/assets/icon/right_arrow.svg) no-repeat;
+  left: auto;
+  width: 60px;
+  background-position: 0 50%;
+  background-size: 100% auto;
+  right: -68px;
+}
+.services-secB .container .process-wrapper .process-slider .swiper-slide .count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+  vertical-align: middle;
+  border: 1px solid #000;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: 600;
+}
+.services-secB .container .process-wrapper .process-slider .swiper-slide h6 {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 0 10px;
+}
+.services-secB .container .process-wrapper .process-slider .swiper-slide p {
+  font-size: 14px;
 }
 .services-secB .container .process-wrapper .btn-wrap {
   position: relative;
@@ -103,4 +154,147 @@
   vertical-align: middle;
   width: 30px;
   height: 30px;
+}
+
+.serviceD-secB .container .colA {
+  border-right: none;
+}
+.serviceD-secB .container .serviceD_secB {
+  background-color: #FF682C;
+}
+.serviceD-secB .container .serviceD_secB .heading h2, .serviceD-secB .container .serviceD_secB .heading p {
+  color: var(--white);
+}
+.serviceD-secB .container .serviceD_secB .serviceD-form {
+  --labelbefore: var(--white);
+  --labelafter: var(--white);
+  --borderbefore: var(--white);
+  --borderafter: var(--white);
+  --color: var(--white);
+}
+
+.services-secB.serviceD_process .heading {
+  max-width: 685px;
+}
+
+.serviceD_case .btn-wrapper .btn-btn:first-child {
+  display: none;
+}
+
+.serviceD-secC .container {
+  border-bottom: 1px solid var(--black);
+}
+.serviceD-secC .container .heading {
+  text-align: center;
+}
+.serviceD-secC .container .include-wrapper {
+  padding: 60px 0;
+  grid-gap: 20px 30px;
+}
+.serviceD-secC .container .include-wrapper .item_col {
+  padding: 30px 20px;
+  border: 1px solid var(--text);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.serviceD-secC .container .include-wrapper .item_col figure {
+  flex: 0 1 auto;
+  max-width: 150px;
+}
+.serviceD-secC .container .include-wrapper .item_col figure img {
+  width: 100%;
+}
+.serviceD-secC .container .include-wrapper .item_col figcaption {
+  flex: 1;
+}
+.serviceD-secC .container .include-wrapper .item_col figcaption h6 {
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.serviceD-secC .container .include-wrapper .item_col figcaption p {
+  color: var(--text);
+  font-size: 14px;
+}
+.serviceD-secC .container .btn-wrapper {
+  text-align: center;
+}
+
+.serviceD-secD .container {
+  border-bottom: 1px solid #000;
+}
+.serviceD-secD .container .heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.serviceD-secD .container .summery-detail-content {
+  max-width: 900px;
+  margin: 30px auto 50px;
+}
+.serviceD-secD .container .summery-detail-content .col {
+  border: 1px solid var(--black);
+  margin-bottom: 15px;
+}
+.serviceD-secD .container .summery-detail-content .col.active {
+  background-color: #F4F4F4;
+}
+.serviceD-secD .container .summery-detail-content .col.active .title {
+  border-bottom: 1px solid var(--black);
+}
+.serviceD-secD .container .summery-detail-content .col.active .title .ico {
+  --bgcolor: var(--black);
+}
+.serviceD-secD .container .summery-detail-content .col .title {
+  padding: 15px;
+  margin-left: 0;
+  transition: 0.5s ease;
+}
+.serviceD-secD .container .summery-detail-content .col .title h6 {
+  color: var(--black);
+}
+.serviceD-secD .container .summery-detail-content .col .content-desc {
+  padding: 15px;
+}
+
+.serviceD-secE .container {
+  border-bottom: 1px solid var(--black);
+}
+.serviceD-secE .container .heading {
+  max-width: 670px;
+  text-align: center;
+  margin: 0 auto;
+}
+.serviceD-secE .container .heading p {
+  color: var(--text);
+}
+.serviceD-secE .container .innersliderwraper {
+  position: relative;
+  padding: 50px 0 0;
+}
+.serviceD-secE .container .innersliderwraper .swiper-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.serviceD-secE .container .innersliderwraper .swiper-nav button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+}
+.serviceD-secE .container .innersliderwraper .swiper-nav button svg {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+.serviceD-secE .container .innersliderwraper .inner-slider {
+  padding-top: 30px;
 }/*# sourceMappingURL=services.css.map */

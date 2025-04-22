@@ -43,6 +43,17 @@
                             svg
                                 transform: translateX(5px)
 
+.serviceAdd
+    .btn-wrapper
+        display: none
+
+.serviceDadd
+    .container
+        border-bottom: 1px solid $black
+    .btn-wrapper
+        text-align: center
+        margin: 50px 0 
+
 .services-secB
     .container
         border-bottom: 1px solid $black
@@ -54,6 +65,41 @@
         .process-wrapper
             .process-slider
                 padding: 50px 0 70px
+                .swiper-slide
+                    .process-wrap
+                        position: relative
+                        &::before
+                            content: ""
+                            position: absolute
+                            z-index: 1
+                            top: 0
+                            bottom: 0
+                            -webkit-user-select: none
+                            -moz-user-select: none
+                            user-select: none
+                            background: url(/assets/icon/right_arrow.svg) no-repeat
+                            left: auto
+                            width: 60px
+                            background-position: 0 50%
+                            background-size: 100% auto
+                            right: -68px
+                    .count
+                        display: inline-flex
+                        align-items: center
+                        justify-content: center
+                        width: 75px
+                        height: 75px
+                        vertical-align: middle
+                        border: 1px solid #000
+                        border-radius: 50%
+                        font-size: 30px
+                        font-weight: 600
+                    h6
+                        font-size: 16px
+                        font-weight: 600
+                        padding: 15px 0 10px
+                    p
+                        font-size: 14px
             .btn-wrap
                 position: relative
                 display: flex
@@ -75,3 +121,123 @@
                             vertical-align: middle
                             width: 30px
                             height: 30px
+
+
+//++++++++++++++++++++++++++ Service Details ++++++++++++++++++++
+.serviceD-secB
+    .container
+        .colA
+            border-right: none
+        .serviceD_secB
+            background-color: #FF682C
+            .heading
+                h2, p
+                    color: $white
+            .serviceD-form
+                --labelbefore: var(--white)
+                --labelafter: var(--white)
+                --borderbefore: var(--white)
+                --borderafter: var(--white)
+                --color: var(--white)
+
+.services-secB.serviceD_process
+    .heading
+        max-width: 685px
+
+.serviceD_case
+    .btn-wrapper
+        .btn-btn:first-child
+            display: none
+
+.serviceD-secC
+    .container
+        border-bottom: 1px solid $black
+        .heading
+            text-align: center
+        .include-wrapper
+            padding: 60px 0 
+            grid-gap: 20px 30px
+            .item_col
+                padding: 30px 20px
+                border: 1px solid $text
+                border-radius: 10px
+                display: flex
+                flex-wrap: wrap
+                gap: 15px
+                figure
+                    flex: 0 1 auto
+                    max-width: 150px
+                    img
+                        width: 100%
+                figcaption
+                    flex: 1
+                    h6
+                        font-size: 18px
+                        font-weight: 600
+                        padding-bottom: 5px
+                    p
+                        color: $text
+                        font-size: 14px
+        .btn-wrapper
+            text-align: center
+
+.serviceD-secD
+    .container
+        border-bottom: 1px solid #000
+        .heading
+            text-align: center
+            max-width: 700px
+            margin: 0 auto
+        .summery-detail-content
+            max-width: 900px
+            margin: 30px auto 50px
+            .col
+                border: 1px solid $black
+                margin-bottom: 15px
+                &.active
+                    background-color: #F4F4F4
+                    .title
+                        border-bottom: 1px solid $black
+                        .ico
+                            --bgcolor: var(--black)
+                .title
+                    padding: 15px
+                    margin-left: 0
+                    transition: .5s ease
+                    h6
+                        color: $black
+                .content-desc
+                    padding: 15px
+
+.serviceD-secE
+    .container
+        border-bottom: 1px solid $black
+        .heading
+            max-width: 670px
+            text-align: center
+            margin: 0 auto 
+            p
+                color: $text
+        .innersliderwraper
+            position: relative
+            padding: 50px 0 0
+            .swiper-nav
+                display: flex
+                align-items: center
+                justify-content: center
+                gap: 10px
+                position: absolute
+                right: 0
+                top: 0  
+                button
+                    display: inline-block
+                    width: 40px
+                    height: 40px
+                    border: 1px solid var(--black)
+                    border-radius: 50%
+                    svg
+                        vertical-align: middle
+                        width: 30px
+                        height: 30px
+            .inner-slider
+                padding-top: 30px

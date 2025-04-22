@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react";
 import "../styles/services/services.css"
 import ButtonMain from "./ButtonMain";
 
-export default function ProcessSec(){
+export default function ProcessSec({ classname="" ,heading, subHeading}){
     const swiperRef = useRef(null);
           useEffect(() => {
             setTimeout(() => {
@@ -18,15 +18,11 @@ export default function ProcessSec(){
             }, 100)
           }, []);
     return (
-      <div className="services-secB">
+      <div className={`services-secB ${classname}`}>
         <div className="container sec-padd-all text-center">
           <div className="heading">
-            <h2>Our Mechanical Engineering Processes</h2>
-            <p>
-              To offer the best business benefits to our clients, we adhere to a
-              streamlined and systematic process for our mechanical design
-              services.
-            </p>
+            <h2>{heading}</h2>
+            <p>{subHeading}</p>
           </div>
           <div className="process-wrapper">
             <Swiper

@@ -536,4 +536,147 @@
 }
 .description-section .flex .colB .DescForm .btn-wrap {
   text-align: center;
+}
+
+.sol-itemCard {
+  padding: 50px 30px;
+  border-right: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.sol-itemCard:hover .hover-item {
+  transform: translateY(0);
+}
+.sol-itemCard h5 {
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto 30px;
+}
+.sol-itemCard figure {
+  width: 100%;
+  height: 100%;
+}
+.sol-itemCard figure img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.sol-itemCard .hover-item {
+  background: var(--gradient-a);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 50px 30px;
+  transform: translateY(100%);
+  transition: 0.7s ease;
+}
+.sol-itemCard .hover-item h5 {
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto 30px;
+  color: var(--white);
+}
+.sol-itemCard .hover-item p {
+  color: var(--white);
+  text-align: center;
+}
+.sol-itemCard .hover-item .btn-btn {
+  margin: 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.sol-itemCard .hover-item .btn-btn:hover span {
+  transform: translate(0);
+}
+.sol-itemCard .hover-item .btn-btn::before {
+  background-color: var(--white);
+}
+.sol-itemCard .hover-item .btn-btn span {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--white);
+  transform: translate(-4px, -3px);
+}
+
+.additional-slider .swiper-slide:last-child .sol-itemCard {
+  border-right: none;
+}
+
+.additional-services .container {
+  padding-bottom: 0;
+}
+.additional-services .heading {
+  position: relative;
+  border-bottom: 1px solid var(--black);
+  padding-bottom: 40px;
+}
+.additional-services .heading h2 {
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: center;
+}
+.additional-services .heading .swiper-nav {
+  position: absolute;
+  right: 5%;
+  top: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.additional-services .heading .swiper-nav button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+}
+.additional-services .heading .swiper-nav button svg {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+
+.service-item {
+  background-color: #F5F5F5;
+  border: 1px solid var(--text);
+  border-radius: 10px;
+  padding: 30px 20px;
+  display: flex;
+  gap: 20px;
+}
+.service-item img {
+  width: 45px;
+  height: 45px;
+}
+.service-item .content {
+  text-align: left;
+}
+.service-item .content h6 {
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+.service-item .content p {
+  font-size: 15px;
+  line-height: 1.3;
+  letter-spacing: 0.7px;
+  color: var(--text);
+  padding-bottom: 15px;
+}
+.service-item .content .more_a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 700;
+}
+.service-item .content .more_a svg {
+  transition: 0.5s ease;
+}
+.service-item .content .more_a:hover svg {
+  transform: translateX(5px);
 }/*# sourceMappingURL=components.css.map */

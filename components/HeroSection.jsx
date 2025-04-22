@@ -2,7 +2,7 @@ import ThreeDCard from "./ThreeDCard"
 import '../styles/home/home.css'
 export default function HeroSection({ heading, desc, cardProps }) {
     return(
-        <div className="home-secA mt-hdr">
+        <div className="home-secA mt-hdrfix">
             <div className="container sec-padd-all flex">
                 <div className="colA">
                     <h2>{heading}</h2>

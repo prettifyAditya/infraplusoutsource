@@ -1,0 +1,50 @@
+@import '../_var'
+
+.case-secA
+    .container
+        border-bottom: 1px solid $black
+        padding-bottom: 50px 
+        .heading
+            max-width: 500px
+            margin: 0 auto
+            p
+                color: $text
+
+.case-secB
+    .container
+        padding-bottom: 0
+        .top-nav
+            display: flex
+            align-items: center
+            justify-content: center
+            gap: 20px
+            h6
+                font-size: 16px
+                color: $text
+            label
+                display: none
+        .casestudies_wrapper
+            padding: 50px 0 
+            .case-grid
+                grid-gap: 20px
+                .case-col
+                    cursor: pointer
+                    transition: 1s ease
+                    &:hover
+                        clip-path: polygon(100% 0%, 100% 100%, 8% 100%, 0% 86%, 0 0)
+                        figure
+                            img
+                                transform: scale(1.2)
+                    &::before
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%)
+                    figure, img
+                        transition: .5s ease
+                    figcaption
+                        padding: 0 25px 30px
+                        h6
+                            font-size: 18px
+                            line-height: 1.2
+                            font-weight: 800
+                            color: $white
+            .btn-wrapper
+                padding-top: 50px
