@@ -48,3 +48,126 @@
                             color: $white
             .btn-wrapper
                 padding-top: 50px
+
+
+// ++++++++++++++++++++++++++++++ CASE STUDY DETAILS ++++++++++++++++++++++++++++++++
+.line
+    position: relative
+    &::after
+        content: ""
+        position: absolute
+        bottom: 40px
+        left: 0%
+        width: 99.5vw
+        height: 1px 
+        background-color: $black
+.banner-container
+    padding-bottom: 40px
+.caseStudy_banner.banner
+    &::before
+        background: linear-gradient(267deg, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0.95) 100%)
+    .bg
+        height: calc( 100vh - var(--headerheight) )
+        overflow-x: hidden
+    .banner-wrapper
+        padding-left: 40px
+        .heading
+            h2
+                max-width: 660px
+                font-size: 36px
+                line-height: 1.2
+                font-weight: 700
+                color: $white
+                margin-bottom: 50px
+
+.caseStudy-secA
+    border-top: 1px solid $black
+    .container
+        border-bottom: 1px solid $black
+        .content
+            max-width: 850px
+            margin: 0 auto
+            p
+                padding-bottom: 15px
+                letter-spacing: 1px
+                text-align: justify
+
+.caseStudy-secB
+    .container
+        border-bottom: 1px solid $black
+        .case-gallery
+            padding-top: 50px
+            grid-gap: 15px
+            .gallery-item
+                position: relative
+                @include before(#0000004a)
+                &::before
+                    opacity: 0
+                    transition: .5s ease
+                &:hover
+                    &::before
+                        opacity: 1
+                    .icon
+                        opacity: 1
+                img
+                    height: 100%
+                .icon
+                    opacity: 0
+                    transition: .5s ease
+                    &::before, &::after
+                        content: ""
+                        position: absolute
+                        display: inline-block
+                        width: 20px
+                        height: 2px
+                        background-color: $white
+                        left: 50%
+                        top: 50%
+                        transform: translate(-50%, -50%)
+                    &::after
+                        transform: translate(-50%, -50%) rotate(90deg)
+
+.caseStudy-secC
+    .container
+        border-bottom: 1px solid $black
+        .case-wrapper
+            padding-top: 80px
+            position: relative
+            .swiper-nav
+                display: flex
+                align-items: center
+                justify-content: center
+                gap: 10px
+                position: absolute
+                right: 0
+                top: 0
+                button
+                    display: inline-block
+                    width: 40px
+                    height: 40px
+                    border: 1px solid var(--black)
+                    border-radius: 50%
+                    svg
+                        vertical-align: middle
+                        width: 30px
+                        height: 30px
+
+.case-col
+    cursor: pointer
+    transition: 1s ease
+    &:hover
+        clip-path: polygon(100% 0%, 100% 100%, 8% 100%, 0% 86%, 0 0)
+        figure
+            img
+                transform: scale(1.2)
+    &::before
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%)
+    figure, img
+        transition: .5s ease
+    figcaption
+        padding: 0 25px 30px
+        h6
+            font-size: 18px
+            line-height: 1.2
+            font-weight: 800
+            color: $white

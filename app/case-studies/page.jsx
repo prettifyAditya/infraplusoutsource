@@ -5,6 +5,7 @@ import "../../styles/case/case.css"
 import Select from "react-select";
 import Image from "next/image";
 import ButtonMain from "../../components/ButtonMain";
+import CaseCard from "../../components/CaseCard";
 
 const customStyles = {
     control: (base, state) => ({
@@ -69,12 +70,48 @@ const options = [
     { value: "Electrical Engineering", label: "Electrical Engineering"},
 ]
 
+const allProjects = [
+    {
+        src: "/assets/images/case/case1.jpg",
+        desc: "Infra outsource Provided CFD Simulation Services to a Leading HVAC Products Manufacturer",
+        category: "Mechanical engineering"
+    },
+    {
+        src: "/assets/images/case/case1.jpg",
+        desc: "Infra outsource Provided CFD Simulation.",
+        category: "Mechanical engineering"
+    },
+    {
+        src: "/assets/images/case/case1.jpg",
+        desc: "Infra outsource Provided CFD Simulation Services to a Leading HVAC.",
+        category: "Architectural Services"
+    },
+    {
+        src: "/assets/images/case/case1.jpg",
+        desc: "Infra outsource Provided CFD Simulation Services to a Leading HVAC Products Manufacturer",
+        category: "Architectural Services"
+    },
+    {
+        src: "/assets/images/case/case1.jpg",
+        desc: "Infra outsource Provided CFD Simulation Services to a Leading HVAC Products Manufacturer",
+        category: "Civil Engineering"
+    },
+    {
+        src: "/assets/images/case/case1.jpg",
+        desc: "Infra outsource Provided CFD Simulation Services to a Leading HVAC Products Manufacturer",
+        category: "Electrical Engineering"
+    },
+]
+
 export default function CaseStudy() {
     const [selectedOption, setSelectedOption] = useState(null)
     const handleChange = (selectedOption) => {
         setSelectedOption(selectedOption);
-        console.log(selectedOption);
       };
+    const filteredProjects = allProjects.filter(project => {
+        const matchesCategory = selectedOption ? project.category === selectedOption.label : true;
+        return matchesCategory
+    })
     return(
         <main>
             <div className="case-secA mt-hdr">
@@ -103,54 +140,19 @@ export default function CaseStudy() {
                     </div>
                     <div className="casestudies_wrapper">
                         <div className="case-grid grid-3">
-                            <div className="case-col item-md">
-                                <figure>
-                                    <Image src="/assets/images/case/case1.jpg" alt="Case Studies" width="362" height="287"></Image>
-                                </figure>
-                                <figcaption>
-                                    <h6>Infra outsource Provided CFD Simulation Services to a Leading HVAC Products Manufacturer</h6>
-                                </figcaption>
-                            </div>
-                            <div className="case-col item-md">
-                                <figure>
-                                    <Image src="/assets/images/case/case1.jpg" alt="Case Studies" width="362" height="287"></Image>
-                                </figure>
-                                <figcaption>
-                                    <h6>Infra outsource Provided CFD Simulation Services to a Leading HVAC Products Manufacturer</h6>
-                                </figcaption>
-                            </div>
-                            <div className="case-col item-md">
-                                <figure>
-                                    <Image src="/assets/images/case/case1.jpg" alt="Case Studies" width="362" height="287"></Image>
-                                </figure>
-                                <figcaption>
-                                    <h6>Infra outsource Provided CFD Simulation Services to a Leading HVAC Products Manufacturer</h6>
-                                </figcaption>
-                            </div>
-                            <div className="case-col item-md">
-                                <figure>
-                                    <Image src="/assets/images/case/case1.jpg" alt="Case Studies" width="362" height="287"></Image>
-                                </figure>
-                                <figcaption>
-                                    <h6>Infra outsource Provided CFD Simulation Services to a Leading HVAC Products Manufacturer</h6>
-                                </figcaption>
-                            </div>
-                            <div className="case-col item-md">
-                                <figure>
-                                    <Image src="/assets/images/case/case1.jpg" alt="Case Studies" width="362" height="287"></Image>
-                                </figure>
-                                <figcaption>
-                                    <h6>Infra outsource Provided CFD Simulation Services to a Leading HVAC Products Manufacturer</h6>
-                                </figcaption>
-                            </div>
-                            <div className="case-col item-md">
-                                <figure>
-                                    <Image src="/assets/images/case/case1.jpg" alt="Case Studies" width="362" height="287"></Image>
-                                </figure>
-                                <figcaption>
-                                    <h6>Infra outsource Provided CFD Simulation Services to a Leading HVAC Products Manufacturer</h6>
-                                </figcaption>
-                            </div>
+                            {
+                                filteredProjects.length > 0 ? (
+                                    filteredProjects.map((project, index) => (
+                                        <CaseCard
+                                            key={index} 
+                                            src={project.src}
+                                            desc={project.desc}
+                                        />
+                                    ))
+                                ) : (
+                                    <p className="text-center">No Cases Found.</p>
+                                )
+                            }
                         </div>
                         <div className="btn-wrapper text-center">
                             <ButtonMain desc="Load More" />

@@ -422,7 +422,7 @@
   --black: #000000;
   --black-light: #313131;
   --gray: #EAEAEA;
-  --container: 1280px;
+  --container: 95%;
   --containerfluid: 2rem;
 }
 @media only screen and (max-width: 768px) {

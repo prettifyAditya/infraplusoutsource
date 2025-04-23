@@ -52,7 +52,6 @@
 }
 .home-secA .flex .colB .home_3d {
   width: 100%;
-  height: 395px;
 }
 .home-secA .flex .colB .home_3d .card-wrap {
   transform: translate(-27px, 27px);
@@ -521,8 +520,7 @@
   padding-bottom: 30px;
 }
 .home-secI .flex .colB figure {
-  width: 565px;
-  height: 447px;
+  width: 100%;
   line-height: 0;
 }
 .home-secI .flex .colB figure video {

@@ -12,6 +12,16 @@
     left: 100%;
   }
 }
+.contact-secA {
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+}
+.contact-secA .heading p {
+  color: var(--text);
+  max-width: 412px;
+  margin: 0 auto;
+}
+
 @media only screen and (max-width: 991px) {
   .contact-secA .flex {
     align-items: center;
@@ -131,59 +141,48 @@
   width: 30px;
 }
 
-.contact-secB {
-  background: var(--gradient-a);
+.contact-secB .flex {
+  border-bottom: 1px solid var(--black);
 }
-.contact-secB .heading {
-  max-width: 580px;
-  margin: 0 auto;
-}
-.contact-secB .heading h3 {
-  font-size: 36px;
-  color: var(--white);
-}
-@media only screen and (max-width: 540px) {
-  .contact-secB .heading h3 {
-    font-size: 22px;
-    line-height: 1.2;
-  }
-}
-.contact-secB .heading p {
-  color: var(--white);
-}
-.contact-secB .form-container {
-  padding-top: 50px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-@media only screen and (max-width: 540px) {
-  .contact-secB .form-container {
-    padding-top: 30px;
-  }
-}
-.contact-secB .form-container .contact-form {
-  --labelbefore: var(--white);
-  --labelafter: var(--white);
-  --borderbefore: var(--white);
-  --borderafter: var(--white);
-  --color: var(--white);
-}
-.contact-secB .form-container .contact-form .btn-wrap {
+.contact-secB .flex .contact-col {
+  flex: 1;
+  padding: 30px 30px 40px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.contact-secB .form-container .contact-form .btn-wrap .btn {
-  width: -moz-fit-content;
-  width: fit-content;
+.contact-secB .flex .contact-col:not(:last-child) {
+  border-right: 1px solid var(--black);
+}
+.contact-secB .flex .contact-col .icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.contact-secB .flex .contact-col h6 {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+.contact-secB .flex .contact-col a {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--text);
+  max-width: 270px;
+  margin-bottom: 30px;
+  transition: 0.5s ease;
+}
+.contact-secB .flex .contact-col a:hover {
+  color: var(--black);
 }
 
-.contact-secC {
-  line-height: 0;
+.contact-secC .container {
+  border-bottom: 1px solid var(--black);
 }
-.contact-secC iframe {
+.contact-secC .container iframe {
   filter: grayscale(1);
-}
-@media only screen and (max-width: 540px) {
-  .contact-secC iframe {
-    height: 400px;
-  }
 }/*# sourceMappingURL=contact.css.map */

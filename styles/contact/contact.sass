@@ -1,6 +1,15 @@
 @import '../_var'
     
 .contact-secA
+    border-top: 1px solid $black
+    border-bottom: 1px solid $black
+    .heading
+        p
+            color: $text
+            max-width: 412px
+            margin: 0 auto
+
+.contact-secA
     .flex
         @include media(991) 
             align-items: center
@@ -79,39 +88,41 @@
                         img
                             width: 30px
 
-.contact-secB 
-    background: var(--gradient-a)
-    .heading
-        max-width: 580px
-        margin: 0 auto
-        h3
-            font-size: 36px
-            color: $white
-            @include media(540)     
-                font-size: 22px
+.contact-secB
+    .flex
+        border-bottom: 1px solid $black
+        .contact-col
+            flex: 1
+            padding: 30px 30px 40px
+            text-align: center
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            &:not(:last-child)
+                border-right: 1px solid $black
+            .icon
+                width: 50px
+                height: 50px
+                margin-bottom: 20px
+            h6
+                font-size: 24px
                 line-height: 1.2
-        p
-            color: $white
-    .form-container
-        padding-top: 50px
-        max-width: 600px
-        margin: 0 auto
-        @include media(540)     
-            padding-top: 30px
-        .contact-form
-            --labelbefore: var(--white)
-            --labelafter: var(--white)
-            --borderbefore: var(--white)
-            --borderafter: var(--white)
-            --color: var(--white)
-            .btn-wrap
-                text-align: center
-                .btn
-                    width: fit-content
+                font-weight: 600
+                padding-bottom: 20px
+            a
+                font-size: 16px
+                line-height: 1.2
+                font-weight: 400
+                color: $text
+                max-width: 270px
+                margin-bottom: 30px
+                transition: .5s ease
+                &:hover
+                    color: $black
 
 .contact-secC
-    line-height: 0
-    iframe
-        filter: grayscale(1)
-        @include media(540)     
-            height: 400px
+    .container
+        border-bottom: 1px solid $black
+        iframe
+            filter: grayscale(1)

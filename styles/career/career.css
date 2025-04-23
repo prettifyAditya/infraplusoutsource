@@ -12,296 +12,147 @@
     left: 100%;
   }
 }
-@media only screen and (max-width: 991px) {
-  .career-secA {
-    padding-bottom: 0;
-  }
-}
-.career-secA .heading {
-  max-width: 580px;
-  margin: 0 auto;
-}
-.career-secA .grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 15px;
-  padding-top: 50px;
-}
-@media only screen and (max-width: 540px) {
-  .career-secA .grid-container {
-    padding-top: 30px;
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-.career-secA .grid-container .career-col {
-  background-color: var(--white);
-  padding: 30px 22px;
-  text-align: center;
-  border: 1px solid #D1D0D0;
-  border-radius: 15px;
-}
-.career-secA .grid-container .career-col .icon {
-  padding-bottom: 10px;
-}
-.career-secA .grid-container .career-col .icon img {
-  width: 44px;
-}
-.career-secA .grid-container .career-col h6 {
-  font-size: 24px;
-  line-height: 1;
-  font-family: "ttrg-bd";
-  padding-bottom: 10px;
-}
-.career-secA .grid-container .career-col p {
-  font-size: 16px;
-  line-height: 1.2;
-  color: var(--black);
-}
-
-.career-secB .main-container .heading {
-  padding-bottom: 60px;
-}
-.career-secB .main-container .career-slider {
+.line {
   position: relative;
 }
-.career-secB .main-container .career-slider .swiper-nav {
-  display: flex;
-  align-items: center;
-  width: 63%;
-  justify-content: space-between;
+.line::after {
+  content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  transform: translate(-50%, -50%);
+  bottom: 40px;
+  left: 0%;
+  width: 99.5vw;
+  height: 1px;
+  background-color: var(--black);
 }
-@media only screen and (max-width: 540px) {
-  .career-secB .main-container .career-slider .swiper-nav {
-    display: none;
-  }
+.line .banner-container {
+  padding-bottom: 40px;
 }
-.career-secB .main-container .career-slider .swiper-nav .career-next, .career-secB .main-container .career-slider .swiper-nav .career-prev {
-  width: 50px;
-  height: 50px;
+.line .banner-container .career_banner .bg {
+  height: calc(100vh - var(--headerheight));
 }
-.career-secB .main-container .career-slider .swiper-nav .career-next img, .career-secB .main-container .career-slider .swiper-nav .career-prev img {
-  height: 100%;
-}
-.career-secB .main-container .career-slider .swiper-nav .career-next {
-  rotate: 180deg;
-}
-
-@media only screen and (max-width: 540px) {
-  .career-secC {
-    padding-top: 0;
-  }
-}
-.career-secC .container .heading {
-  padding-bottom: 50px;
-}
-.career-secC .container .summery-detail-content {
-  max-width: 900px;
-  margin: 0 auto;
-}
-.career-secC .container .summery-detail-content .col {
-  --padlr: 0;
-  border-radius: 10px;
-  transition: 0.5s ease;
-  margin-bottom: 10px;
-}
-.career-secC .container .summery-detail-content .col.active .title {
-  background: var(--gradient-a);
-}
-.career-secC .container .summery-detail-content .col.active .title h6 {
+.line .banner-container .career_banner .banner-wrapper .heading h2, .line .banner-container .career_banner .banner-wrapper .heading p {
   color: var(--white);
 }
-.career-secC .container .summery-detail-content .col.active .title .ico {
-  --bgcolor: var(--white);
-}
-.career-secC .container .summery-detail-content .col.active .title .ico::after {
-  transform: scaleY(0);
-}
-.career-secC .container .summery-detail-content .col.active article {
-  max-height: -moz-fit-content;
-  max-height: fit-content;
-  opacity: 1;
-}
-.career-secC .container .summery-detail-content .col .title {
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-  align-items: center;
-  padding: 15px 20px;
-  cursor: pointer;
-  transition: 0.5s ease;
-  border: 1px solid #ccc;
-  background-color: #E4E4E4;
-  border-radius: 5px;
-}
-.career-secC .container .summery-detail-content .col .title h6 {
-  font-size: 18px;
-  line-height: 1.2;
-  font-weight: 500;
-  flex: 1;
-  color: var(--black);
-  font-family: "ttrg-bd";
-  padding-right: 1rem;
-  transition: 0.5s ease;
-}
-@media only screen and (max-width: 540px) {
-  .career-secC .container .summery-detail-content .col .title h6 {
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width: 345px) {
-  .career-secC .container .summery-detail-content .col .title h6 {
-    font-size: 14px;
-  }
-}
-.career-secC .container .summery-detail-content .col .title .ico {
-  flex: 0 1 auto;
-  --size: 18px;
-  --border: 2px;
-  --bgcolor: var(--black);
-  height: var(--size);
-  width: var(--size);
-  position: relative;
-}
-.career-secC .container .summery-detail-content .col .title .ico::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  pointer-events: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  background: var(--bgcolor);
-}
-.career-secC .container .summery-detail-content .col .title .ico::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  pointer-events: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  background: var(--bgcolor);
-}
-.career-secC .container .summery-detail-content .col .title .ico::before, .career-secC .container .summery-detail-content .col .title .ico::after {
-  transition: 0.5s ease;
-}
-.career-secC .container .summery-detail-content .col .title .ico::before {
-  top: calc(var(--size) / 2 - var(--border) / 2);
-  bottom: auto;
-  height: var(--border);
-  width: 100%;
-}
-.career-secC .container .summery-detail-content .col .title .ico::after {
-  left: calc(var(--size) / 2);
-  translate: -50% 0;
-  right: auto;
-  width: var(--border);
-  height: 100%;
-}
-.career-secC .container .summery-detail-content .col article {
-  position: relative;
-  background: var(--white);
-  border: 1px solid #c1c1c1;
-  border-top: none;
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
-  border-radius: 0 0 5px 5px;
-}
-.career-secC .container .summery-detail-content .col article .content-desc {
-  padding: 15px 20px 20px;
-  border-bottom: 1px solid #D1D1D1;
-}
-.career-secC .container .summery-detail-content .col article .content-desc p, .career-secC .container .summery-detail-content .col article .content-desc ul, .career-secC .container .summery-detail-content .col article .content-desc h2, .career-secC .container .summery-detail-content .col article .content-desc h3, .career-secC .container .summery-detail-content .col article .content-desc h4, .career-secC .container .summery-detail-content .col article .content-desc h5, .career-secC .container .summery-detail-content .col article .content-desc h6 {
-  margin-bottom: 16px;
-}
-.career-secC .container .summery-detail-content .col article .content-desc *:not(button) {
-  color: var(--text);
-  font-size: 16px;
-  line-height: 1.5;
-}
-.career-secC .container .summery-detail-content .col article .content-desc h1, .career-secC .container .summery-detail-content .col article .content-desc h2, .career-secC .container .summery-detail-content .col article .content-desc h3, .career-secC .container .summery-detail-content .col article .content-desc h4, .career-secC .container .summery-detail-content .col article .content-desc h5, .career-secC .container .summery-detail-content .col article .content-desc h6, .career-secC .container .summery-detail-content .col article .content-desc b {
-  color: var(--black);
-  font-weight: 500;
-}
-.career-secC .container .summery-detail-content .col article .content-desc ul {
-  padding-left: 20px;
-}
-.career-secC .container .summery-detail-content .col article .content-desc ul li {
-  list-style: none;
-}
-.career-secC .container .summery-detail-content .col article .content-desc ul li::before {
-  background-color: var(--primary);
-}
-@media only screen and (max-width: 540px) {
-  .career-secC .container .summery-detail-content .col article .content-desc ul li {
-    font-size: 14px;
-  }
-}
-.career-secC .container .summery-detail-content .col article .content-desc ul li:not(:last-child) {
-  margin-bottom: 5px;
-}
-@media only screen and (max-width: 540px) {
-  .career-secC .container .summery-detail-content .col article .content-desc p {
-    font-size: 14px;
-  }
+.line .banner-container .career_banner .banner-wrapper .heading p {
+  max-width: 420px;
+  margin: 0 auto;
 }
 
-.career-secD .heading {
-  margin-bottom: 60px;
+.career-secA {
+  border-top: 1px solid var(--black);
 }
-.career-secD .heading h3 {
+.career-secA .flex {
+  border-bottom: 1px solid var(--black);
+}
+.career-secA .flex .colA, .career-secA .flex .colB {
+  flex: 1;
+}
+.career-secA .flex .colA h2 {
   font-size: 36px;
-  line-height: 1.2;
+  line-height: 1.3;
+  max-width: 410px;
 }
-@media only screen and (max-width: 540px) {
-  .career-secD .heading h3 {
-    font-size: 26px;
-  }
+.career-secA .flex .colB {
+  padding: 0 20px;
 }
-.career-secD .heading p {
-  font-size: 18px;
-  color: var(--black);
+.career-secA .flex .colB p {
+  color: var(--text);
+  margin-bottom: 50px;
 }
-@media only screen and (max-width: 540px) {
-  .career-secD .heading p {
-    font-size: 16px;
-  }
+
+.career-secB .container {
+  border-bottom: 1px solid var(--black);
 }
-.career-secD .form {
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
-  --item: 2;
-  --inputsize: 52px;
-  --image: url(../../public/assets/icon/clip-gray.svg) no-repeat;
-  --gaplr: 24px;
-  --gaptb: 20px;
-  --paddingleftright: 17px;
+.career-secB .container .life-wrapper {
+  padding-top: 70px;
+  position: relative;
 }
-@media only screen and (max-width: 675px) {
-  .career-secD .form {
-    --item: 1;
-  }
+.career-secB .container .life-wrapper .swiper-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
-.career-secD .form .form-group {
-  background: var(--white);
+.career-secB .container .life-wrapper .swiper-nav button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+}
+.career-secB .container .life-wrapper .swiper-nav button svg {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+.career-secB .container .life-wrapper .life-slider .swiper-slide figure {
   border-radius: 10px;
+  line-height: 1;
 }
-.career-secD .form .form-group::before, .career-secD .form .form-group::after {
-  display: none;
+.career-secB .container .life-wrapper .life-slider .swiper-slide figure:hover img {
+  filter: grayscale(0);
+}
+.career-secB .container .life-wrapper .life-slider .swiper-slide figure:hover .icon {
+  opacity: 1;
+}
+.career-secB .container .life-wrapper .life-slider .swiper-slide figure img {
+  filter: grayscale(1);
+  border-radius: 10px;
+  height: 100%;
+}
+.career-secB .container .life-wrapper .life-slider .swiper-slide figure .icon {
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(255, 104, 44, 0.7607843137);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.career-secB .container .life-wrapper .life-slider .swiper-slide figure .icon::before, .career-secB .container .life-wrapper .life-slider .swiper-slide figure .icon::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--white);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.career-secB .container .life-wrapper .life-slider .swiper-slide figure .icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.career-secC .container .heading {
+  max-width: 620px;
+  margin: 0 auto;
+}
+.career-secC .container .heading p {
+  color: var(--text);
+}
+.career-secC .container .workHere-wrapper {
+  padding-top: 60px;
+  gap: 40px;
+}
+.career-secC .container .workHere-wrapper .colA {
+  flex: 1;
+}
+.career-secC .container .workHere-wrapper .colA h6 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  padding-bottom: 10px;
+}
+.career-secC .container .workHere-wrapper .colA p {
+  max-width: 620px;
+}
+.career-secC .container .workHere-wrapper .colB {
+  flex: 0 1 auto;
 }/*# sourceMappingURL=career.css.map */
