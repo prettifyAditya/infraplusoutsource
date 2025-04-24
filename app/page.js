@@ -293,7 +293,7 @@ export default function Home() {
           </div>
             <CaseSlider heading={
               <>
-                Turning Concepts into <span className="highlight">Iconic</span>
+                Turning Concepts into <span className="highlight">Iconic </span>
                 Creations
               </>
             }

@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"; 
 import "swiper/css/navigation"; 
 import { Navigation } from "swiper/modules"
-import { useEffect, useRef } from "react";
+import { useEffect, useRef,useState } from "react";
 import Image from "next/image"
 import ButtonMain from "../../components/ButtonMain"
 import "../../styles/career/career.css"
@@ -25,7 +25,108 @@ const lifeData = [
     },
 ]
 
+const workSliderData = [
+    {
+        src: "/assets/images/careers/icon/icon1.svg",
+        title: "Individuality",
+        desc: "At infraoutsource, we do not just recognize uniqueness; we celebrate it."
+    },
+    {
+        src: "/assets/images/careers/icon/icon2.svg",
+        title: "Curiosity",
+        desc: "Our shared passion for discovery drives every team member."
+    },
+    {
+        src: "/assets/images/careers/icon/icon1.svg",
+        title: "Three",
+        desc: "At infraoutsource, we do not just recognize uniqueness; we celebrate it."
+    },
+    {
+        src: "/assets/images/careers/icon/icon1.svg",
+        title: "Individuality",
+        desc: "At infraoutsource, we do not just recognize uniqueness; we celebrate it."
+    },
+    {
+        src: "/assets/images/careers/icon/icon1.svg",
+        title: "Individuality",
+        desc: "At infraoutsource, we do not just recognize uniqueness; we celebrate it."
+    },
+
+]
+
+const openingData = [
+    {
+        title: "Software Engineer",
+        description: `
+           <h6><strong>Job Location : </strong>Gurgaon</h6>
+           <h6><strong>Experience : </strong>1 Years</h6>
+           <p>At Infraoutsource, we are passionate about building beautiful and user-friendly websites. We are looking for a web developer to join our team and help us create amazing websites for our clients. As a web developer, you will be working closely with our senior web developers to learn the ropes of the trade.</p>
+           <button class="btn">
+                Apply Now
+            </button>
+        `
+    },
+    {
+        title: "Business Development Executive",
+        description: `
+           <h6><strong>Job Location : </strong>Gurgaon</h6>
+           <h6><strong>Experience : </strong>1 Years</h6>
+           <p>At Infraoutsource, we are passionate about building beautiful and user-friendly websites. We are looking for a web developer to join our team and help us create amazing websites for our clients. As a web developer, you will be working closely with our senior web developers to learn the ropes of the trade.</p>
+           <button class="btn-btn">
+                <span type="button">
+                    Apply Now
+                </span>
+            </button>
+        `
+    },
+    {
+        title: "Business Development Executive",
+        description: `
+           <h6><strong>Job Location : </strong>Gurgaon</h6>
+           <h6><strong>Experience : </strong>1 Years</h6>
+           <p>At Infraoutsource, we are passionate about building beautiful and user-friendly websites. We are looking for a web developer to join our team and help us create amazing websites for our clients. As a web developer, you will be working closely with our senior web developers to learn the ropes of the trade.</p>
+           <button class="btn-btn">
+                <span type="button">
+                    Apply Now
+                </span>
+            </button>
+        `
+    },
+    {
+        title: "Business Development Executive",
+        description: `
+           <h6><strong>Job Location : </strong>Gurgaon</h6>
+           <h6><strong>Experience : </strong>1 Years</h6>
+           <p>At Infraoutsource, we are passionate about building beautiful and user-friendly websites. We are looking for a web developer to join our team and help us create amazing websites for our clients. As a web developer, you will be working closely with our senior web developers to learn the ropes of the trade.</p>
+           <button class="btn-btn">
+                <span type="button">
+                    Apply Now
+                </span>
+            </button>
+        `
+    },
+
+]
+
+const openModel = () => {
+    document.querySelector('.career-pop').classList.add('is-open')
+    document.querySelector('.overlay').classList.add('is-open')
+    document.querySelector('body').classList.add('overflow-hidden')
+}
 export default function Career() {
+    useEffect(() => {
+        const buttons = document.querySelectorAll('.open-model-btn')
+        
+        buttons.forEach(btn => btn.addEventListener('click', openModel))
+
+        return() => {
+            buttons.forEach(btn => btn.removeEventListener('click', openModel));
+        }
+    }, [])
+    const [activeIndex, setActiveIndex] = useState(null);
+    const toggleAccordion = (index) => {
+        setActiveIndex(activeIndex === index ? null : index);
+    };
     const swiperRef = useRef(null);
     useEffect(() => {
         setTimeout(() => {
@@ -61,7 +162,9 @@ export default function Career() {
                     </div>
                     <div className="colB">
                         <p>At Infraoutsource, we value diversity and believe in equal opportunities for everyone. We focus on continuous learning to help people grow as strategic thinkers. Our training programs are designed to guide everyone toward success and encourage them to contribute to our exciting journey together.</p>
-                        <ButtonMain desc="Current Openings" />
+                        <button className="btn">
+                            Current Openings
+                        </button>
                     </div>
                 </div>
             </div>
@@ -137,12 +240,98 @@ export default function Career() {
                             <h6>What we stand for
                             </h6>
                             <p>To support our goal, we operate under 3 pillars. Each one is integral to our company culture and how we operate.</p>
+                            <div className="work-wrapper">
+                            <div className="swiper-nav work-nav">
+                                <button className="work-prev">
+                                    <div className="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" d="m14 7l-5 5l5 5" strokeWidth="1"/></svg>
+                                    </div>
+                                </button>
+                                <button className="work-next">
+                                    <div className="svgg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" d="m10 17l5-5l-5-5" strokeWidth="1"/></svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <Swiper 
+                                className="work-slider"
+                                ref={swiperRef}
+                                modules={[Navigation]}
+                                spaceBetween={30}
+                                slidesPerView ={2}
+                                speed={1000}
+                                navigation={{
+                                    prevEl: ".work-prev",
+                                    nextEl: ".work-next"
+                                }}
+                                breakpoints={{
+                                        0: {
+                                            slidesPerView: 1.2,
+                                        },
+                                        540: {
+                                            slidesPerView: 1.2,
+                                        },
+                                        991: {
+                                            slidesPerView: 2,
+                                        },
+                                        1200: {
+                                            slidesPerView: 2
+                                        }
+                                    }}
+                                    onSwiper={(swiper) => (swiperRef.current = swiper)}
+                                >
+                                    {
+                                        workSliderData.map((item, index) => (
+                                            <SwiperSlide key={index}> 
+                                                <div className="work-col">
+                                                    <div className="icon">
+                                                        <Image src={item.src} alt="icon" width="45" height="45" />
+                                                    </div>
+                                                    <h6>{item.title}</h6>
+                                                    <p>{item.desc}</p>
+                                                </div>
+                                            </SwiperSlide>
+                                        ))
+                                    }
+                                </Swiper>
+                            </div>
                         </div>
                         <div className="colB">
                             <figure>
                                 <Image src="/assets/images/careers/career-secC.jpg" width="418" height="322" alt="What we stand for" />
                             </figure>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div className="career-secD">
+                <div className="container sec-padd-all flex">
+                    <div className="colA">
+                        <h2>Current Openings</h2>
+                        <ButtonMain onClick={openModel} desc="Apply Now" />
+                    </div>
+                    <div className="colB">
+                        <div className="current-openings">
+                            {
+                                openingData.length > 0 ? (
+                                    openingData.map((opening, index) => (
+                                        <div key={index} className={`col ${activeIndex === index ? "active" : ""}`}>
+                                            <div className="title" onClick={() => toggleAccordion(index)}>
+                                                <h6>{opening.title}</h6>
+                                                <div className="ico"></div>
+                                            </div>
+                                            <article>
+                                                <div className="content-desc website-content">
+                                                    <div dangerouslySetInnerHTML={{ __html: opening.description }} />
+                                                </div>
+                                            </article>
+                                        </div>
+                                    ))                        
+                                ) : (
+                                    <p className="text-center">No Current Openings.</p>
+                                )
+                            }
+                        </div>  
                     </div>
                 </div>
             </div>

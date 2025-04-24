@@ -73,6 +73,7 @@ header
                     display: inline-block
                     vertical-align: middle
                     max-width: 100px
+                    text-align: left
                     line-height: 1
                     padding: var(--headerpadding) 0
                     &.hasDropdown
@@ -97,7 +98,7 @@ header
                                 background-size: var(--arrowsize) auto
                                 padding-left: calc(var(--arrowsize) + var(--space))
                                 position: absolute
-                                right: -45px
+                                right: -55px
                                 width: fit-content
                                 height: 100%
                                 top: 0
@@ -593,10 +594,10 @@ footer
         overflow-y: auto
         display: flex
         flex-direction: column
-        background: url(/assets/icon/infra-icon.png) no-repeat
-        background-position-x: 90%
-        background-position-y: 80%
-        background-size: 100px
+        // background: url(/assets/icon/infra-icon.png) no-repeat
+        // background-position-x: 90%
+        // background-position-y: 80%
+        // background-size: 100px
         @include scrollbar(6px,$white,#5e5e5e,8px)
         @include media(520)
             padding: 40px 20px
@@ -623,6 +624,7 @@ footer
                     .hamsubmenu
                         max-height: 0
                         opacity: 0
+                        padding: 0px 40px
                         pointer-events: none
                         overflow: hidden
                         background: #f9f9f9
@@ -630,11 +632,11 @@ footer
                         &::-webkit-scrollbar
                             display: none
                         &.active
-                            max-height: 200px
+                            max-height: 90vh
+                            padding: 10px 40px
                             opacity: 1
                             pointer-events: auto
                         ul
-                            padding: 0 10px
                             >li
                                 &.subHasDropdown
                                     position: relative
@@ -675,12 +677,14 @@ footer
                                         ul
                                             padding: 0 10px
                                             a
-                                                font-size: 16px
+                                                font-size: 14px
+                                                font-weight: 400
                                                 display: block
 
                                 >a
                                     display: block
-                                    font-size: 20px
+                                    font-size: 18px
+                                    font-weight: 500
                                     padding: 5px
                                     color: $text
                                     transition: .5s ease
@@ -783,6 +787,47 @@ footer
             --item: 1
         .btn-btn
             margin: 20px auto 0
+
+.career-pop
+    right: 0
+    transform: translateX(100%)
+    transition: .5s ease
+    background: #fff
+    &.is-open
+        transform: translateX(0%)
+    .model-body
+        margin-top: 60px
+        padding: 0px 35px 30px
+        height: 100%
+        overflow-y: auto
+        @include scrollbar(3px,$white,#5e5e5e,8px)
+        @include media(675)
+            padding: 70px 20px 30px
+        .title
+            text-align: center
+            margin-bottom: 2rem
+            h4
+                font-size: 32px
+                color: $black
+                @include font(500)
+            p
+                color: $text
+                margin-top: 10px
+                font-size: 14px
+                line-height: 20px
+                max-width: 317px
+                margin-left: auto
+                margin-right: auto
+                @include media(675)
+                    font-size: 14px
+                    max-width: 300px
+        .form
+            --gaptb: 20px
+            --gaplr: 15px   
+            --item: 2
+        .btn-btn
+            margin: 20px auto 0
+
 .video-pop
     left: 0
     right: 0

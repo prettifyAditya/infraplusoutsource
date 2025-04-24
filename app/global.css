@@ -202,6 +202,7 @@
   height: calc(var(--inputsize) - var(--borderwidth));
   position: relative;
   --filename: "Attach Resume*";
+  --image: "/assets/icon/clip-gray.svg";
   --filenameinitial: var(--filename);
   --color: var(--text);
   --background: none;
@@ -1044,8 +1045,14 @@ button {
   position: relative;
   transition: 0.5s ease;
 }
+.btn-btn:hover::before {
+  opacity: 0;
+}
 .btn-btn:hover span {
   transform: translate(0, 0);
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
 }
 .btn-btn::before {
   content: "";
@@ -1057,6 +1064,7 @@ button {
   height: 100%;
   border-radius: 25px;
   z-index: 0;
+  transition: 1.5s ease;
 }
 .btn-btn span {
   border: 1px solid var(--black);
@@ -1099,7 +1107,7 @@ button {
      -moz-user-select: none;
           user-select: none;
   position: relative;
-  border-radius: 25px;
+  border-radius: 5px;
   z-index: 1;
   font-weight: 500;
 }

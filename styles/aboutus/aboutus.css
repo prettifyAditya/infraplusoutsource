@@ -28,7 +28,7 @@
   padding-bottom: 40px;
 }
 .line .banner-container .caseStudy_banner .bg {
-  height: calc(100vh - var(--headerheight));
+  height: calc(90vh - var(--headerheight));
 }
 .line .banner-container .caseStudy_banner .banner-wrapper .heading h2, .line .banner-container .caseStudy_banner .banner-wrapper .heading p {
   color: var(--white);

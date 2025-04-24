@@ -201,6 +201,7 @@
   height: calc(var(--inputsize) - var(--borderwidth));
   position: relative;
   --filename: "Attach Resume*";
+  --image: "/assets/icon/clip-gray.svg";
   --filenameinitial: var(--filename);
   --color: var(--text);
   --background: none;
@@ -1043,8 +1044,14 @@ button {
   position: relative;
   transition: 0.5s ease;
 }
+.btn-btn:hover::before {
+  opacity: 0;
+}
 .btn-btn:hover span {
   transform: translate(0, 0);
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
 }
 .btn-btn::before {
   content: "";
@@ -1056,6 +1063,7 @@ button {
   height: 100%;
   border-radius: 25px;
   z-index: 0;
+  transition: 1.5s ease;
 }
 .btn-btn span {
   border: 1px solid var(--black);
@@ -1098,7 +1106,7 @@ button {
      -moz-user-select: none;
           user-select: none;
   position: relative;
-  border-radius: 25px;
+  border-radius: 5px;
   z-index: 1;
   font-weight: 500;
 }
@@ -2326,6 +2334,7 @@ header .header-wrapper .colA .solutions_ul > li {
   display: inline-block;
   vertical-align: middle;
   max-width: 100px;
+  text-align: left;
   line-height: 1;
   padding: var(--headerpadding) 0;
 }
@@ -2352,7 +2361,7 @@ header .header-wrapper .colA .solutions_ul > li.hasDropdown > a::after {
   background-size: var(--arrowsize) auto;
   padding-left: calc(var(--arrowsize) + var(--space));
   position: absolute;
-  right: -45px;
+  right: -55px;
   width: -moz-fit-content;
   width: fit-content;
   height: 100%;
@@ -2924,10 +2933,6 @@ footer .bottom-footer .pret a img {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  background: url(/assets/icon/infra-icon.png) no-repeat;
-  background-position-x: 90%;
-  background-position-y: 80%;
-  background-size: 100px;
 }
 .ham-pop .model-body::-webkit-scrollbar {
   width: 6px;
@@ -2974,6 +2979,7 @@ footer .bottom-footer .pret a img {
 .ham-pop .model-body .nav-list > li.hamhasDropdown .hamsubmenu {
   max-height: 0;
   opacity: 0;
+  padding: 0px 40px;
   pointer-events: none;
   overflow: hidden;
   background: #f9f9f9;
@@ -2983,12 +2989,10 @@ footer .bottom-footer .pret a img {
   display: none;
 }
 .ham-pop .model-body .nav-list > li.hamhasDropdown .hamsubmenu.active {
-  max-height: 200px;
+  max-height: 90vh;
+  padding: 10px 40px;
   opacity: 1;
   pointer-events: auto;
-}
-.ham-pop .model-body .nav-list > li.hamhasDropdown .hamsubmenu ul {
-  padding: 0 10px;
 }
 .ham-pop .model-body .nav-list > li.hamhasDropdown .hamsubmenu ul > li.subHasDropdown {
   position: relative;
@@ -3036,12 +3040,14 @@ footer .bottom-footer .pret a img {
   padding: 0 10px;
 }
 .ham-pop .model-body .nav-list > li.hamhasDropdown .hamsubmenu ul > li.subHasDropdown .subsubmenu ul a {
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 400;
   display: block;
 }
 .ham-pop .model-body .nav-list > li.hamhasDropdown .hamsubmenu ul > li > a {
   display: block;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 500;
   padding: 5px;
   color: var(--text);
   transition: 0.5s ease;
@@ -3199,6 +3205,71 @@ footer .bottom-footer .pret a img {
   --item: 1;
 }
 .enquire-pop .model-body .btn-btn {
+  margin: 20px auto 0;
+}
+
+.career-pop {
+  right: 0;
+  transform: translateX(100%);
+  transition: 0.5s ease;
+  background: #fff;
+}
+.career-pop.is-open {
+  transform: translateX(0%);
+}
+.career-pop .model-body {
+  margin-top: 60px;
+  padding: 0px 35px 30px;
+  height: 100%;
+  overflow-y: auto;
+}
+.career-pop .model-body::-webkit-scrollbar {
+  width: 3px;
+  background: var(--white);
+  height: 3px;
+}
+.career-pop .model-body::-webkit-scrollbar-track {
+  box-shadow: none;
+}
+.career-pop .model-body::-webkit-scrollbar-thumb {
+  background-color: #5e5e5e;
+  border-radius: 8px;
+}
+@media only screen and (max-width: 675px) {
+  .career-pop .model-body {
+    padding: 70px 20px 30px;
+  }
+}
+.career-pop .model-body .title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.career-pop .model-body .title h4 {
+  font-size: 32px;
+  color: var(--black);
+  font-weight: 500;
+}
+.career-pop .model-body .title p {
+  color: var(--text);
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  max-width: 317px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (max-width: 675px) {
+  .career-pop .model-body .title p {
+    font-size: 14px;
+    max-width: 300px;
+  }
+}
+.career-pop .model-body .form {
+  --gaptb: 20px;
+  --gaplr: 15px;
+  --item: 2;
+}
+.career-pop .model-body .btn-btn {
   margin: 20px auto 0;
 }
 

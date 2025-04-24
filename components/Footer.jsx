@@ -3,6 +3,9 @@ import Link from "next/link"
 import '../styles/header/header.css'
 import { useEffect } from "react"
 import Image from "next/image"
+import Hamburger from "./Hamburger"
+import EnquirePop from "./EnquirePop"
+import CareerPop from "./CareerPop"
 
 export default function Footer() {
     useEffect(() => {
@@ -320,10 +323,15 @@ export default function Footer() {
           onClick={() => {
             document.querySelector(".ham-pop").classList.remove("is-open");
             document.querySelector(".enquire-pop").classList.remove("is-open");
+            document.querySelector(".career-pop").classList.remove("is-open");
             document.querySelector(".overlay").classList.remove("is-open");
             document.querySelector("body").classList.remove("overflow-hidden");
           }}
         ></div>
+
+          <Hamburger />
+          <EnquirePop />
+          <CareerPop />
       </>
     );
 }

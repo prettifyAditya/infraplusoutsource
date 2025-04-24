@@ -391,8 +391,13 @@ button
     position: relative
     transition: 0.5s ease
     &:hover
+        &::before
+            opacity: 0
         span
             transform: translate(0, 0)
+            background-color: var(--primary)
+            border-color: var(--primary)
+            color: #fff
     &::before
         content: ""
         position: absolute
@@ -403,6 +408,7 @@ button
         height: 100%
         border-radius: 25px
         z-index: 0
+        transition: 1.5s ease
     span
         border: 1px solid var(--black)
         display: inline-flex
@@ -439,7 +445,7 @@ button
     caret-color: transparent
     user-select: none
     position: relative
-    border-radius: 25px
+    border-radius: 5px
     z-index: 1
     @include font(500)
     @include media(540)

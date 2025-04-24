@@ -5,6 +5,7 @@ import "../styles/header/header.css"
 import { useEffect } from "react"
 import Hamburger from "./Hamburger";
 import EnquirePop from "./EnquirePop";
+import CareerPop from "./CareerPop";
 
 export default function Header() {
 
@@ -295,8 +296,9 @@ export default function Header() {
                     </div>
                 </div>
             </header>
-            <Hamburger />
+            {/* <Hamburger />
             <EnquirePop />
+            <CareerPop /> */}
         </>
     )
 }

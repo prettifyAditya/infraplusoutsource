@@ -30,7 +30,7 @@ export default function ContactUs() {
                         </div>
                         <h6>Call Us</h6>
                         <Link href="telto:+919810632693">+91 98106 32693</Link>
-                        <ButtonMain desc="WhatsApp" />
+                        <ButtonMain desc="WHATSAPP" />
                     </div>
                     <div className="contact-col">
                         <div className="icon">
