@@ -63,7 +63,7 @@ export default function Hamburger() {
                                     <div className="plus-icon"></div>
                                     <div className="subsubmenu">
                                         <ul>
-                                            <li><Link href="javascript:;">CAD Conversion Services</Link></li>
+                                            <li><Link href="/services" onClick={navigate}>CAD Conversion Services</Link></li>
                                             <li><Link href="javascript:;">CAD Conversion Services</Link></li>
                                             <li><Link href="javascript:;">CAD Conversion Services</Link></li>
                                             <li><Link href="javascript:;">CAD Conversion Services</Link></li>
@@ -78,10 +78,13 @@ export default function Hamburger() {
                         </div>
                     </li>
                     <li>
-                        <Link href="/contact-us" onClick={navigate}>Case Studies</Link>
+                        <Link href="/case-studies" onClick={navigate}>Case Studies</Link>
                     </li>
                     <li>
                         <Link href="/contact-us" onClick={navigate}>Contact Us</Link>
+                    </li>
+                    <li>
+                        <Link href="/careers" onClick={navigate}>Careers</Link>
                     </li>
                 </ul>
                 <div className="bottom-list">

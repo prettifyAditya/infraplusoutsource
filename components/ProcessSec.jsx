@@ -7,6 +7,10 @@ import { Navigation } from "swiper/modules"
 import { useEffect, useRef } from "react";
 import "../styles/services/services.css"
 import ButtonMain from "./ButtonMain";
+import StaticData from "../public/data/StaticData.json"
+
+const processData = StaticData.Service.ProcessData
+
 
 export default function ProcessSec({ classname="" ,heading, subHeading}){
     const swiperRef = useRef(null);
@@ -52,56 +56,19 @@ export default function ProcessSec({ classname="" ,heading, subHeading}){
               }}
               onSwiper={(swiper) => (swiperRef.current = swiper)}
             >
-              <SwiperSlide>
-                <div className="process-wrap">
-                  <span className="count">01</span>
-                  <h6>Requirement Analysis</h6>
-                  <p>
-                    meet with the client to discuss their business challenges
-                    and project requirements.
-                  </p>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="process-wrap">
-                  <span className="count">01</span>
-                  <h6>Requirement Analysis</h6>
-                  <p>
-                    meet with the client to discuss their business challenges
-                    and project requirements.
-                  </p>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="process-wrap">
-                  <span className="count">01</span>
-                  <h6>Requirement Analysis</h6>
-                  <p>
-                    meet with the client to discuss their business challenges
-                    and project requirements.
-                  </p>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="process-wrap">
-                  <span className="count">01</span>
-                  <h6>Requirement Analysis</h6>
-                  <p>
-                    meet with the client to discuss their business challenges
-                    and project requirements.
-                  </p>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="process-wrap">
-                  <span className="count">01</span>
-                  <h6>Requirement Analysis</h6>
-                  <p>
-                    meet with the client to discuss their business challenges
-                    and project requirements.
-                  </p>
-                </div>
-              </SwiperSlide>
+              {
+                processData.map((item, index) => (
+                  <SwiperSlide key={index}>
+                      <div className="process-wrap">
+                        <span className="count">{(index + 1).toString().padStart(2, "0")}</span>
+                        <h6>{item.title}</h6>
+                        <p>
+                          {item.description}
+                        </p>
+                      </div>
+                  </SwiperSlide>
+                ))
+              }
             </Swiper>
             <div className="btn-wrap">
               <ButtonMain />

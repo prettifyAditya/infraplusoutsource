@@ -1,3 +1,4 @@
+import AboutSec from "../components/AboutSec"
 import ButtonMain from "../components/ButtonMain"
 import CaseSlider from "../components/CaseSlider"
 import ClientSlider from "../components/ClientSlider"
@@ -240,7 +241,15 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="home-secD">
+          <AboutSec
+            heading="Infra Outsource"
+            desc={
+              <p>
+                Infraoutsouce Pvt. Ltd. is an IS0 9001: 2015 certified young and dynamic design and project management focused company, anchored by a group of professionals having experience across various sectors of development and investments. 
+              </p>
+            }
+          />
+          {/* <div className="home-secD">
             <div className="container sec-padd-all flex">
               <div className="colA">
                 <h1>Infra Outsource</h1>
@@ -278,7 +287,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <WhyChooseAcc />
           <div className="home-secF">
             <div className="container sec-padd-all">

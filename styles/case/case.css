@@ -79,14 +79,20 @@
 .line {
   position: relative;
 }
-.line::after {
+.line::after, .line::before {
   content: "";
   position: absolute;
-  bottom: 40px;
   left: 0%;
   width: 99.5vw;
   height: 1px;
   background-color: var(--black);
+  z-index: 1;
+}
+.line::after {
+  bottom: 40px;
+}
+.line::before {
+  top: 0;
 }
 
 .banner-container {

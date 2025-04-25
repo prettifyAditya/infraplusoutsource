@@ -1,17 +1,23 @@
 @import '../_var'
 .line
     position: relative
-    &::after
+    &::after, &::before
         content: ""
         position: absolute
-        bottom: 40px
         left: 0%
         width: 99.5vw
         height: 1px 
         background-color: $black
+        z-index: 1
+    &::after
+        bottom: 40px
+    &::before
+        top: 0
     .banner-container
         padding-bottom: 40px
         .career_banner
+            &::before
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0.6) 100%)
             .bg
                 height: calc( 90vh - var(--headerheight) )
             .banner-wrapper

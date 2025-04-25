@@ -15,17 +15,26 @@
 .line {
   position: relative;
 }
-.line::after {
+.line::after, .line::before {
   content: "";
   position: absolute;
-  bottom: 40px;
   left: 0%;
   width: 99.5vw;
   height: 1px;
   background-color: var(--black);
+  z-index: 1;
+}
+.line::after {
+  bottom: 40px;
+}
+.line::before {
+  top: 0;
 }
 .line .banner-container {
   padding-bottom: 40px;
+}
+.line .banner-container .caseStudy_banner::before {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0.6) 100%);
 }
 .line .banner-container .caseStudy_banner .bg {
   height: calc(90vh - var(--headerheight));

@@ -191,7 +191,7 @@ export default function Footer() {
                       <Link href="/about-us">About Us</Link>
                     </li>
                     <li>
-                      <Link href="/projects">Projects</Link>
+                      <Link href="/case-studies">Case Studies</Link>
                     </li>
                     <li>
                       <Link href="/services">Services</Link>
@@ -200,7 +200,7 @@ export default function Footer() {
                       <Link href="/contact-us">Contact Us</Link>
                     </li>
                     <li>
-                      <Link href="javascript:;">Terms & Conditions</Link>
+                      <Link href="/careers">Careers</Link>
                     </li>
                     <li>
                       <Link href="/privacy-policy">Policy of use</Link>
