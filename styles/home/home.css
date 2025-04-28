@@ -594,6 +594,11 @@
 .home-secF .container {
   border-bottom: 1px solid var(--black);
 }
+@media only screen and (max-width: 540px) {
+  .home-secF .container {
+    padding-bottom: 100px;
+  }
+}
 .home-secF .container .heading {
   text-align: center;
   max-width: 590px;
@@ -625,6 +630,16 @@
 @media only screen and (max-width: 768px) {
   .home-secF .container .steps-wrapper .steps-nav {
     display: none;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .home-secF .container .steps-wrapper .steps-nav {
+    display: flex;
+    right: unset;
+    top: unset;
+    left: 50%;
+    bottom: -10%;
+    transform: translate(-50%, 100%);
   }
 }
 .home-secF .container .steps-wrapper .steps-nav button {
@@ -694,6 +709,11 @@
   background: var(--gradient-a);
   border-radius: 50%;
 }
+@media only screen and (max-width: 540px) {
+  .home-secF .container .steps-wrapper .steps-slider .swiper-slide .step-wrap .upper-count .icon {
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.11);
+  }
+}
 .home-secF .container .steps-wrapper .steps-slider .swiper-slide .step-wrap .upper-count .icon img {
   vertical-align: middle;
   width: 25px;
@@ -744,6 +764,11 @@
 .home-secG .container {
   border-bottom: 1px solid #000;
 }
+@media only screen and (max-width: 540px) {
+  .home-secG .container {
+    padding-bottom: 50px;
+  }
+}
 .home-secG .container .heading {
   max-width: 500px;
 }
@@ -768,6 +793,16 @@
 @media only screen and (max-width: 768px) {
   .home-secG .container .caseStudy-wrapper .swiper-nav, .home-secG .container .client-wrapper .swiper-nav {
     display: none;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .home-secG .container .caseStudy-wrapper .swiper-nav, .home-secG .container .client-wrapper .swiper-nav {
+    display: flex;
+    right: unset;
+    left: 50%;
+    bottom: -20px;
+    top: unset;
+    transform: translate(-50%, 0);
   }
 }
 .home-secG .container .caseStudy-wrapper .swiper-nav button, .home-secG .container .client-wrapper .swiper-nav button {
@@ -796,6 +831,11 @@
   justify-content: center;
   gap: 20px;
 }
+@media only screen and (max-width: 540px) {
+  .home-secG .container .btn-wrapper {
+    padding-top: 60px;
+  }
+}
 
 .home-secH .container {
   border-bottom: 1px solid #000;
@@ -814,6 +854,11 @@
 .home-secH .client-wrapper {
   position: relative;
   padding: 50px 0 30px;
+}
+@media only screen and (max-width: 768px) {
+  .home-secH .client-wrapper .swiper-nav.client-nav {
+    display: none;
+  }
 }
 .home-secH .client-wrapper .client-slider {
   padding-top: 30px;

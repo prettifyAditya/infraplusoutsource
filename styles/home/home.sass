@@ -372,6 +372,8 @@
 .home-secF
     .container
         border-bottom: 1px solid $black
+        @include media(540) 
+            padding-bottom: 100px
         .heading
             text-align: center
             max-width: 590px
@@ -393,6 +395,13 @@
                 top: 0
                 @include media(768)
                     display: none
+                @include media(540) 
+                    display: flex
+                    right: unset
+                    top: unset
+                    left: 50%
+                    bottom: -10%
+                    transform: translate(-50%, 100%)
                 button
                     display: inline-block
                     width: 40px
@@ -445,6 +454,8 @@
                                 height: 50px
                                 background: var(--gradient-a)
                                 border-radius: 50%
+                                @include media(540) 
+                                    box-shadow: 0 13px 27px -5px rgb(50 50 93 / 11%)
                                 img
                                     vertical-align: middle
                                     width: 25px
@@ -482,6 +493,8 @@
 .home-secG
     .container
         border-bottom: 1px solid #000
+        @include media(540) 
+            padding-bottom: 50px
         .heading
             max-width: 500px
         .caseStudy-wrapper, .client-wrapper
@@ -499,6 +512,13 @@
                 top: 0
                 @include media(768)
                     display: none
+                @include media(540) 
+                    display: flex
+                    right: unset
+                    left: 50%
+                    bottom: -20px
+                    top: unset 
+                    transform: translate(-50%, 0)
                 button
                     display: inline-block
                     width: 40px
@@ -521,6 +541,8 @@
             align-items: center
             justify-content: center
             gap: 20px
+            @include media(540) 
+                padding-top: 60px
 
 .home-secH
     .container
@@ -534,6 +556,9 @@
     .client-wrapper
         position: relative
         padding: 50px 0 30px
+        .swiper-nav.client-nav
+            @include media(768)
+                display: none
         .client-slider
             padding-top: 30px
             @include media(768)
