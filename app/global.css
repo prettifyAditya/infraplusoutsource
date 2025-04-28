@@ -1060,6 +1060,11 @@ button {
     --height: 32px;
   }
 }
+@media only screen and (max-width: 540px) {
+  .btn-btn {
+    --padding: 10px;
+  }
+}
 .btn-btn:hover::before {
   opacity: 0;
 }

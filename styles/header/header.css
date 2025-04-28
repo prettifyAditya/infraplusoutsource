@@ -1059,6 +1059,11 @@ button {
     --height: 32px;
   }
 }
+@media only screen and (max-width: 540px) {
+  .btn-btn {
+    --padding: 10px;
+  }
+}
 .btn-btn:hover::before {
   opacity: 0;
 }
@@ -2286,6 +2291,7 @@ header::after {
 @media only screen and (max-width: 540px) {
   header {
     height: 70px;
+    background-color: #fff;
   }
 }
 header::after {
@@ -3034,11 +3040,6 @@ footer .bottom-footer .pret a img {
   background-color: #5e5e5e;
   border-radius: 8px;
 }
-@media only screen and (max-width: 520px) {
-  .ham-pop .model-body {
-    padding: 40px 20px;
-  }
-}
 .ham-pop .model-body .ico {
   max-width: 70px;
   margin-bottom: 55px;
@@ -3061,6 +3062,11 @@ footer .bottom-footer .pret a img {
   rotate: 90deg;
   transition: 0.5s ease;
 }
+@media only screen and (max-width: 768px) {
+  .ham-pop .model-body .nav-list > li.hamhasDropdown .more_down {
+    right: 25px;
+  }
+}
 .ham-pop .model-body .nav-list > li.hamhasDropdown .more_down.active {
   rotate: 0deg;
 }
@@ -3073,6 +3079,11 @@ footer .bottom-footer .pret a img {
   background: #f9f9f9;
   transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out;
 }
+@media only screen and (max-width: 768px) {
+  .ham-pop .model-body .nav-list > li.hamhasDropdown .hamsubmenu {
+    padding: 0 25px;
+  }
+}
 .ham-pop .model-body .nav-list > li.hamhasDropdown .hamsubmenu::-webkit-scrollbar {
   display: none;
 }
@@ -3081,6 +3092,11 @@ footer .bottom-footer .pret a img {
   padding: 10px 40px;
   opacity: 1;
   pointer-events: auto;
+}
+@media only screen and (max-width: 768px) {
+  .ham-pop .model-body .nav-list > li.hamhasDropdown .hamsubmenu.active {
+    padding: 10px 25px;
+  }
 }
 .ham-pop .model-body .nav-list > li.hamhasDropdown .hamsubmenu ul > li.subHasDropdown {
   position: relative;
@@ -3092,6 +3108,11 @@ footer .bottom-footer .pret a img {
   --sizeplus: 20px;
   height: var(--sizeplus);
   width: var(--sizeplus);
+}
+@media only screen and (max-width: 768px) {
+  .ham-pop .model-body .nav-list > li.hamhasDropdown .hamsubmenu ul > li.subHasDropdown .plus-icon {
+    top: 8px;
+  }
 }
 .ham-pop .model-body .nav-list > li.hamhasDropdown .hamsubmenu ul > li.subHasDropdown .plus-icon.active::before {
   transform: rotate(0);
@@ -3156,19 +3177,19 @@ footer .bottom-footer .pret a img {
     font-size: 28px;
   }
 }
-@media only screen and (max-width: 675px) {
+@media only screen and (max-width: 768px) {
   .ham-pop .model-body .nav-list > li > a {
     font-size: 24px;
-    padding: 10px 0;
+    padding: 10px 20px;
   }
 }
 .ham-pop .model-body .nav-list > li > a:hover {
   color: var(--primary);
   padding-left: 45px;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 768px) {
   .ham-pop .model-body .nav-list > li > a:hover {
-    padding-left: 10px;
+    padding-left: 30px;
   }
 }
 .ham-pop .model-body .bottom-list {

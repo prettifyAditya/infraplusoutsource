@@ -13,6 +13,7 @@ header
         border-bottom: 1px solid #000
     @include media(540)
         height: 70px
+        background-color: #fff
     &::after
         bottom: auto
         height: 0
@@ -612,8 +613,6 @@ footer
         // background-position-y: 80%
         // background-size: 100px
         @include scrollbar(6px,$white,#5e5e5e,8px)
-        @include media(520)
-            padding: 40px 20px
         .ico
             max-width: 70px
             margin-bottom: 55px
@@ -632,6 +631,8 @@ footer
                         top: 10px
                         rotate: 90deg
                         transition: .5s ease
+                        @include media(768)
+                            right: 25px
                         &.active
                             rotate: 0deg
                     .hamsubmenu
@@ -642,6 +643,8 @@ footer
                         overflow: hidden
                         background: #f9f9f9
                         transition: max-height .5s ease-in-out, opacity .4s ease-in-out
+                        @include media(768)
+                            padding: 0 25px
                         &::-webkit-scrollbar
                             display: none
                         &.active
@@ -649,6 +652,8 @@ footer
                             padding: 10px 40px
                             opacity: 1
                             pointer-events: auto
+                            @include media(768)
+                                padding: 10px 25px
                         ul
                             >li
                                 &.subHasDropdown
@@ -660,6 +665,8 @@ footer
                                         --sizeplus: 20px
                                         height: var(--sizeplus)
                                         width: var(--sizeplus)
+                                        @include media(768)
+                                            top: 8px
                                         &.active
                                             &::before
                                                 transform: rotate(0)
@@ -712,14 +719,14 @@ footer
                     @include font(500)
                     @include media(1366)
                         font-size: 28px
-                    @include media(675)
+                    @include media(768)
                         font-size: 24px
-                        padding: 10px 0 
+                        padding: 10px 20px
                     &:hover
                         color: var(--primary)
                         padding-left: 45px
-                        @include media(540)
-                            padding-left: 10px 
+                        @include media(768)
+                            padding-left: 30px
                         
         .bottom-list
             border-top: 1px solid #ccc

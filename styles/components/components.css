@@ -506,6 +506,8 @@
 }
 @media only screen and (max-width: 540px) {
   .formComWrapper .flex .colA .form-3d {
+    width: 150px;
+    height: 300px;
     --borderwidth: 40px;
   }
 }
@@ -556,6 +558,7 @@
 @media only screen and (max-width: 540px) {
   .formComWrapper .flex .colB .title h2 {
     font-size: 24px;
+    padding: 0 15px 5px;
   }
 }
 .formComWrapper .flex .colB .title p {
