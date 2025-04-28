@@ -72,10 +72,10 @@ export default function StepSlider({ title, desc}) {
         }}
         breakpoints={{
           0: {
-            slidesPerView: 1.2,
+            slidesPerView: 1,
           },
           540: {
-            slidesPerView: 2.1,
+            slidesPerView: 1.2,
           },
           991: {},
           1200: {

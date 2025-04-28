@@ -96,16 +96,16 @@ export default function CaseSlider({ classname="" ,heading, subHeading }) {
             onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
             <SwiperSlide>
-              <ThreeDCard desc="Infra outsource Provided CFD Simulation Services to a Leading HVAC Products Manufacturer" />
+              <ThreeDCard desc="Infra outsource Provided CFD Simulation Services to a Leading HVAC Products Manufacturer" className="caseCard"  />
             </SwiperSlide>
             <SwiperSlide>
-              <ThreeDCard desc="Infra outsource Provided CFD Simulation Services to a Leading HVAC Products Manufacturer" />
+              <ThreeDCard desc="Infra outsource Provided CFD Simulation Services to a Leading HVAC Products Manufacturer" className="caseCard" />
             </SwiperSlide>
             <SwiperSlide>
-              <ThreeDCard desc="Infra outsource Provided CFD Simulation Services to a Leading HVAC Products Manufacturer" />
+              <ThreeDCard desc="Infra outsource Provided CFD Simulation Services to a Leading HVAC Products Manufacturer" className="caseCard" />
             </SwiperSlide>
             <SwiperSlide>
-              <ThreeDCard desc="Infra outsource Provided CFD Simulation Services to a Leading HVAC Products Manufacturer" />
+              <ThreeDCard desc="Infra outsource Provided CFD Simulation Services to a Leading HVAC Products Manufacturer" className="caseCard" />
             </SwiperSlide>
           </Swiper>
         </div>

@@ -429,6 +429,16 @@
 }
 @media only screen and (max-width: 768px) {
   :root {
+    --headerpadding: 25px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  :root {
+    --headerpadding: 5px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  :root {
     --headerfixed: 50px;
   }
 }
@@ -735,7 +745,7 @@ h3 {
 }
 @media only screen and (max-width: 520px) {
   .heading h3, .heading h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 @media only screen and (max-width: 345px) {
@@ -1045,6 +1055,11 @@ button {
   position: relative;
   transition: 0.5s ease;
 }
+@media only screen and (max-width: 991px) {
+  .btn-btn {
+    --height: 32px;
+  }
+}
 .btn-btn:hover::before {
   opacity: 0;
 }
@@ -1344,6 +1359,11 @@ button {
 
 .swiper-nav {
   line-height: 0;
+}
+@media only screen and (max-width: 768px) {
+  .swiper-nav {
+    display: none;
+  }
 }
 .swiper-nav.center-full {
   position: absolute;
@@ -2160,6 +2180,21 @@ button {
 
 .sec-padd-all {
   padding: 70px 40px 90px;
+}
+@media only screen and (max-width: 991px) {
+  .sec-padd-all {
+    padding: 60px 30px 80px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .sec-padd-all {
+    padding: 50px 25px 65px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .sec-padd-all {
+    padding: 30px 20px 50px;
+  }
 }
 
 .bg-circle {

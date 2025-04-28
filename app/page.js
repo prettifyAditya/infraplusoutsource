@@ -335,5 +335,6 @@ export default function Home() {
           </div>
             <FormComponent />
       </main>
+      
     )
 }

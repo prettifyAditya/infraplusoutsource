@@ -20,6 +20,11 @@
   cursor: pointer;
   position: relative;
 }
+@media only screen and (max-width: 768px) {
+  .service-col {
+    padding: 10px 15px;
+  }
+}
 .service-col::before {
   content: "";
   width: 0%;
@@ -47,6 +52,12 @@
   height: 60px;
   margin-bottom: 10px;
   transition: 1s ease;
+}
+@media only screen and (max-width: 540px) {
+  .service-col img {
+    width: 35px;
+    height: 35px;
+  }
 }
 .service-col p {
   color: var(--black);
@@ -113,6 +124,11 @@
   padding: 10px;
   transition: 0.5s ease;
 }
+@media only screen and (max-width: 540px) {
+  .summery-detail-content .col .title .outer-circle {
+    padding: 7px;
+  }
+}
 .summery-detail-content .col .title .ico {
   flex: 0 1 auto;
   --size: 18px;
@@ -149,6 +165,11 @@
      -moz-user-select: none;
           user-select: none;
   background: var(--bgcolor);
+}
+@media only screen and (max-width: 540px) {
+  .summery-detail-content .col .title .ico {
+    --size: 14px;
+  }
 }
 .summery-detail-content .col .title .ico::before, .summery-detail-content .col .title .ico::after {
   transition: 0.5s ease;
@@ -221,6 +242,11 @@
   position: relative;
   overflow: hidden;
   padding: 0 0 var(--borderwidth) var(--borderwidth);
+}
+@media only screen and (max-width: 540px) {
+  .col-3d {
+    --borderwidth: 15px;
+  }
 }
 .col-3d:hover .card-wrap {
   transform: translate(0, 0);
@@ -334,11 +360,21 @@
   left: 10%;
   padding: 0 40px 20px;
 }
+@media only screen and (max-width: 540px) {
+  .col-3d .card-wrap .card figcaption {
+    padding: 0 10px 20px;
+  }
+}
 .col-3d .card-wrap .card figcaption p {
   font-size: 18px;
   color: var(--white);
   line-height: 1.2;
   font-weight: 800;
+}
+@media only screen and (max-width: 540px) {
+  .col-3d .card-wrap .card figcaption p {
+    font-size: 16px;
+  }
 }
 
 .col-3d-right {
@@ -443,6 +479,17 @@
   align-items: center;
   gap: 100px;
 }
+@media only screen and (max-width: 991px) {
+  .formComWrapper .flex {
+    gap: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .formComWrapper .flex {
+    flex-direction: column;
+    gap: 0;
+  }
+}
 .formComWrapper .flex .colA {
   flex: 0 1 40%;
   display: flex;
@@ -451,6 +498,16 @@
 .formComWrapper .flex .colA .form-3d {
   width: 300px;
   height: 480px;
+}
+@media only screen and (max-width: 991px) {
+  .formComWrapper .flex .colA .form-3d {
+    --borderwidth: 60px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .formComWrapper .flex .colA .form-3d {
+    --borderwidth: 40px;
+  }
 }
 .formComWrapper .flex .colA .form-3d:hover .card-wrap::before, .formComWrapper .flex .colA .form-3d:hover .card-wrap::after {
   width: var(--borderheight);
@@ -477,12 +534,29 @@
 .formComWrapper .flex .colB .title {
   padding: 40px 0;
 }
+@media only screen and (max-width: 768px) {
+  .formComWrapper .flex .colB .title {
+    padding: 0 0 30px;
+    text-align: center;
+  }
+}
 .formComWrapper .flex .colB .title h2 {
   font-size: 36px;
   line-height: 1.3;
   font-weight: 700;
   max-width: 297px;
   padding-bottom: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .formComWrapper .flex .colB .title h2 {
+    max-width: 100%;
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .formComWrapper .flex .colB .title h2 {
+    font-size: 24px;
+  }
 }
 .formComWrapper .flex .colB .title p {
   color: var(--black);
