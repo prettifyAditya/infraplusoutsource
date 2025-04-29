@@ -149,6 +149,7 @@
 .career-secC .container .workHere-wrapper {
   padding-top: 60px;
   gap: 40px;
+  justify-content: space-around;
 }
 .career-secC .container .workHere-wrapper .colA {
   flex: 1;
@@ -180,6 +181,9 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
+}
+.career-secC .container .workHere-wrapper .colA .work-wrapper .swiper-nav button {
+  box-shadow: none;
 }
 .career-secC .container .workHere-wrapper .colA .work-wrapper .swiper-nav .swiper-button-disabled {
   opacity: 0;

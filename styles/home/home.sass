@@ -314,8 +314,8 @@
                 @include media(540) 
                     height: 300px
                 video
-                    width: 100%
-                    height: 100%
+                    width: 99%
+                    height: 99%
 
 .home-secE
     .container
@@ -594,6 +594,11 @@
                     transform: translateY(100%)
                     transition: .7s ease
                     z-index: 2
+                    @include media-min(1300)
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        flex-direction: column
                     @include media(540) 
                         padding: 20px
                     img

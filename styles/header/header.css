@@ -1364,6 +1364,15 @@ button {
 .swiper-nav {
   line-height: 0;
 }
+.swiper-nav button {
+  box-shadow: 3px 2px 0px #000;
+}
+.swiper-nav button:hover {
+  background: var(--primary);
+}
+.swiper-nav button:hover .svgg svg path {
+  stroke: #fff;
+}
 @media only screen and (max-width: 768px) {
   .swiper-nav {
     display: none;
@@ -2275,6 +2284,7 @@ header {
   z-index: 5;
   transition: 0.5s ease;
   height: var(--headerheight);
+  background-color: #fff;
 }
 header::after {
   content: "";
@@ -2471,6 +2481,7 @@ header .header-wrapper .colA .solutions_ul > li.hasDropdown .dropdown-menu .drop
   width: 100%;
   padding: 10px 20px;
   text-align: left;
+  cursor: pointer;
 }
 header .header-wrapper .colA .solutions_ul > li.hasDropdown .dropdown-menu .dropdown-menu-wrap .colA-md .subcat-ul > .subcat-li:hover {
   background: var(--gradient-a);
@@ -2488,7 +2499,7 @@ header .header-wrapper .colA .solutions_ul > li.hasDropdown .dropdown-menu .drop
   display: block;
 }
 header .header-wrapper .colA .solutions_ul > li.hasDropdown .dropdown-menu .dropdown-menu-wrap .colA-md .subcat-ul > .subcat-li > a {
-  display: inline-block;
+  display: block;
   padding: 5px 0 3px;
   color: var(--text);
   font-size: 16px;
