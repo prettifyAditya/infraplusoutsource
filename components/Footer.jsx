@@ -6,6 +6,7 @@ import Image from "next/image"
 import Hamburger from "./Hamburger"
 import EnquirePop from "./EnquirePop"
 import CareerPop from "./CareerPop"
+import FooterStrip from "./FooterStrip"
 
 export default function Footer() {
     useEffect(() => {
@@ -332,6 +333,7 @@ export default function Footer() {
           <Hamburger />
           <EnquirePop />
           <CareerPop />
+          <FooterStrip />
       </>
     );
 }

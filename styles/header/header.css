@@ -2259,6 +2259,14 @@ button {
   color: var(--primary);
 }
 
+.error_msg {
+  color: #ef1111;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  font-size: 14px;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -3285,11 +3293,6 @@ footer .bottom-footer .pret a img {
 .enquire-pop .model-body::-webkit-scrollbar-thumb {
   background-color: #5e5e5e;
   border-radius: 8px;
-}
-@media only screen and (max-width: 675px) {
-  .enquire-pop .model-body {
-    padding: 70px 20px 30px;
-  }
 }
 .enquire-pop .model-body .title {
   text-align: center;
