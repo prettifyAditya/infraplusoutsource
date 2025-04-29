@@ -4,13 +4,54 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"; 
 import "swiper/css/navigation"; 
 import { Navigation } from "swiper/modules"
-import { useRef } from "react"
+import { useRef, useEffect } from "react"
 import AditionalCard from "./AditionalCard"
 import "../styles/components/components.css"
 import ButtonMain from "./ButtonMain";
 
 export default function AditionalSec({ heading, classname="" }) {
     const swiperRef = useRef(null)
+    const updateBorders = () => {
+        const swiper = swiperRef.current;
+        if(!swiper) return;
+
+        const {slides, activeIndex} = swiper;
+        const slidesPerView = swiper.params.slidesPerView;
+        const currentSlidesPerView =
+      typeof slidesPerView === 'function'
+        ? slidesPerView()
+        : typeof slidesPerView === 'number'
+        ? slidesPerView
+        : swiper.params.breakpoints
+        ? swiper.currentBreakpoint &&
+          swiper.params.breakpoints[swiper.currentBreakpoint]?.slidesPerView
+        : 1;
+
+        slides.forEach((slide) => slide.classList.remove('bordernone'));
+        const lastVisibleIndex = activeIndex + currentSlidesPerView - 1;
+        if (slides[lastVisibleIndex]) {
+        slides[lastVisibleIndex].classList.add('bordernone');
+        }
+    }
+    useEffect(() => {
+        const swiper = swiperRef.current;
+        if (swiper) {
+          swiper.on('slideChange', updateBorders);
+          swiper.on('resize', updateBorders);
+          swiper.on('init', updateBorders);
+    
+          // Call once after init
+          setTimeout(() => updateBorders(), 100);
+        }
+    
+        return () => {
+          if (swiper) {
+            swiper.off('slideChange', updateBorders);
+            swiper.off('resize', updateBorders);
+            swiper.off('init', updateBorders);
+          }
+        };
+      }, []);
     return(
         <div className={`additional-services ${classname}`}>
             <div className="container sec-pad">
@@ -71,10 +112,13 @@ export default function AditionalSec({ heading, classname="" }) {
                     }}
                     breakpoints={{
                         0: {
-                          slidesPerView: 2,
+                          slidesPerView: 1,
                         },
                         540: {
-                          slidesPerView: 3,
+                          slidesPerView: 2,
+                        },
+                        768: {
+                            slidesPerView: 3,
                         },
                         991: {
                             slidesPerView: 4
@@ -83,7 +127,10 @@ export default function AditionalSec({ heading, classname="" }) {
                           slidesPerView: 4,
                         },
                       }}
-                    onSwiper={(swiper) => (swiperRef.current = swiper)}
+                    onSwiper={(swiper) => {
+                        swiperRef.current = swiper
+                        updateBorders();
+                    }}
                 >
                     <SwiperSlide>
                         <AditionalCard

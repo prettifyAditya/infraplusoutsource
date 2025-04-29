@@ -13,6 +13,7 @@ export default function Services() {
     return (
       <main>
         <HeroSection
+          classname="serviceHero"
           heading="Outsource Mechanical Engineering Services"
           desc="Leverage our mechanical engineering services to optimize production. Identify system challenges and speed-up delivery with our objective evaluation"
           cardProps={{

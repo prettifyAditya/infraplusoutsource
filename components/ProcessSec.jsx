@@ -42,9 +42,13 @@ export default function ProcessSec({ classname="" ,heading, subHeading}){
               }}
               breakpoints={{
                 0: {
-                  slidesPerView: 2,
+                  slidesPerView: 1,
+                  spaceBetween: 30
                 },
                 540: {
+                  slidesPerView: 2,
+                },
+                768: {
                   slidesPerView: 3,
                 },
                 991: {

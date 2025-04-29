@@ -75,9 +75,11 @@ export default function StepSlider({ title, desc}) {
             slidesPerView: 1,
           },
           540: {
-            slidesPerView: 1.2,
+            slidesPerView: 1.5,
           },
-          991: {},
+          768:{
+            slidesPerView: 2,
+          },
           1200: {
             slidesPerView: 3,
           },

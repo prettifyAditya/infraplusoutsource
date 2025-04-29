@@ -51,6 +51,7 @@
 }
 .home-secA .flex .colA, .home-secA .flex .colB {
   flex: 1;
+  width: 100%;
 }
 @media only screen and (max-width: 768px) {
   .home-secA .flex .colA {
@@ -67,6 +68,11 @@
   .home-secA .flex .colA h2 {
     font-size: 36px;
     line-height: 1.2;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .home-secA .flex .colA h2 {
+    font-size: 30px;
   }
 }
 @media only screen and (max-width: 540px) {
