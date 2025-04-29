@@ -6,11 +6,12 @@ import DescSec from "../../components/DescSec"
 import FormComponent from "../../components/FormComponent"
 import HeroSection from "../../components/HeroSection"
 import ProcessSec from "../../components/ProcessSec"
+import '../../styles/case/case.css'
 import '../../styles/services/services.css'
 import ButtonMain from "../../components/ButtonMain"
 import { useState } from "react"
-import InnerServicesCard from "../../components/InnerServicesCard"
 import InnerServicesSlider from "../../components/InnerServicesSlider"
+import CaseGallery from "../../components/CaseGallery"
 
 const openingData = [
     {
@@ -54,6 +55,33 @@ const openingData = [
     
 ];
 
+const CaseGalleryData = [
+    {
+        mainImg: "/assets/images/case/caseStudy1.jpg",
+        zoomImg: "/assets/images/case/caseStudy1.jpg",
+    },
+    {
+        mainImg: "/assets/images/case/caseStudy1.jpg",
+        zoomImg: "/assets/images/case/caseStudy1.jpg",
+    },
+    {
+        mainImg: "/assets/images/case/caseStudy1.jpg",
+        zoomImg: "/assets/images/case/caseStudy1.jpg",
+    },
+    {
+        mainImg: "/assets/images/case/caseStudy1.jpg",
+        zoomImg: "/assets/images/case/caseStudy1.jpg",
+    },
+    {
+        mainImg: "/assets/images/case/caseStudy1.jpg",
+        zoomImg: "/assets/images/case/caseStudy1.jpg",
+    },
+    {
+        mainImg: "/assets/images/case/caseStudy1.jpg",
+        zoomImg: "/assets/images/case/caseStudy1.jpg",
+    },
+]
+
 const ServiceDetails = ({openings = openingData}) => {
     const [activeIndex, setActiveIndex] = useState(null);
 
@@ -63,10 +91,11 @@ const ServiceDetails = ({openings = openingData}) => {
     return(
         <main>
             <HeroSection
+                classname="serviceD-banner"
                 heading="Outsource CAD Conversion Services"
                 desc="Leverage our mechanical engineering services to optimize production. Identify system challenges and speed-up delivery with our objective evaluation"
                 cardProps={{
-                className: "home_3d",
+                className: "home_3d service_3d",
                 mediaType: "image",
                 src: "/assets/images/services/serviceD-banner.jpg",
                 }}
@@ -125,6 +154,21 @@ const ServiceDetails = ({openings = openingData}) => {
                     </div>
                     <div className="btn-wrapper">
                         <ButtonMain />
+                    </div>
+                </div>
+            </div>
+            <div className="caseStudy-secB">
+                <div className="container sec-padd-all">
+                    <div className="heading text-center">
+                        <h2>Every Space Tells a Story</h2>
+                        <p>Turning Data into Decisions</p>
+                    </div>
+                    <div className="case-gallery grid-3">
+                        {
+                            CaseGalleryData.map((item, index) => (
+                                <CaseGallery key={index} {...item} />
+                            ))
+                        }
                     </div>
                 </div>
             </div>

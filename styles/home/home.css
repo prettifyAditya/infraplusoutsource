@@ -832,6 +832,11 @@
   padding-top: 30px;
 }
 @media only screen and (max-width: 768px) {
+  .home-secG .container .caseStudy-wrapper .case-slider, .home-secG .container .client-wrapper .case-slider {
+    padding-top: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
   .home-secG .container .caseStudy-wrapper .case-slider .caseCard::after, .home-secG .container .client-wrapper .case-slider .caseCard::after {
     right: 1px;
   }

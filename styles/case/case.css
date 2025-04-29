@@ -141,6 +141,18 @@
   padding-top: 50px;
   grid-gap: 15px;
 }
+@media only screen and (max-width: 991px) {
+  .caseStudy-secB .container .case-gallery {
+    padding-top: 40px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 540px) {
+  .caseStudy-secB .container .case-gallery {
+    padding-top: 30px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .caseStudy-secB .container .case-gallery .gallery-item {
   position: relative;
   position: relative;

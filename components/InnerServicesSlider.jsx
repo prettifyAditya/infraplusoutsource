@@ -83,9 +83,14 @@ export default function InnerServicesSlider() {
               breakpoints={{
                 0: {
                   slidesPerView: 1.2,
+                  spaceBetween: 10
                 },
                 540: {
-                  slidesPerView: 2.1,
+                  slidesPerView: 1.2,
+                  spaceBetween: 10
+                },
+                768: {
+                  slidesPerView: 2.2,
                 },
                 991: {},
                 1200: {

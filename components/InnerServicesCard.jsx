@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function InnerServicesCard({ heading, subHeading }) {
     return (
-        <div className="service-item">
+        <div className="service-item inner_services">
                 <Image
                   src="/assets/images/services/icon/icon1.svg"
                   alt="Icon"

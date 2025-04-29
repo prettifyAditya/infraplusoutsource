@@ -102,6 +102,12 @@
         .case-gallery
             padding-top: 50px
             grid-gap: 15px
+            @include media(991)
+                padding-top: 40px
+                grid-template-columns: repeat(2, 1fr)
+            @include media(540) 
+                padding-top: 30px
+                grid-template-columns: repeat(1, 1fr)
             .gallery-item
                 position: relative
                 @include before(#0000004a)
