@@ -1033,7 +1033,7 @@ button {
     z-index: 2;
   }
 }
-@media only screen and (max-width: 675px) {
+@media only screen and (max-width: 540px) {
   .overlay {
     display: none;
   }
@@ -2909,7 +2909,7 @@ footer .main-footer {
 }
 @media only screen and (max-width: 540px) {
   footer .main-footer {
-    padding: 30px 20px 40px;
+    padding: 30px 0px 40px;
   }
 }
 footer .main-footer .colA {
@@ -2944,11 +2944,22 @@ footer .main-footer .colB {
   footer .main-footer .colB {
     padding: 0;
     flex-direction: column;
-    gap: 10px;
+    gap: 25px;
   }
 }
 footer .main-footer .colB .list {
   flex: 1;
+}
+@media only screen and (max-width: 540px) {
+  footer .main-footer .colB .list {
+    padding: 0 20px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  footer .main-footer .colB .list:first-child {
+    border-bottom: 1px solid var(--black);
+    padding-bottom: 30px;
+  }
 }
 footer .main-footer .colB .list h6 {
   font-size: 18px;
@@ -2958,6 +2969,12 @@ footer .main-footer .colB .list h6 {
 }
 footer .main-footer .colB .list > ul.connect li {
   margin-bottom: 15px;
+}
+@media only screen and (max-width: 540px) {
+  footer .main-footer .colB .list > ul:not(.connect) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 footer .main-footer .colB .list > ul > li {
   display: flex;

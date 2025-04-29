@@ -44,11 +44,15 @@
                     flex-direction: column
                     padding: 20px 15px
                     gap: 15px
+                @include media(540)
+                    align-items: center
                 img
                     width: 45px
                     height: 45px
                 .content
                     text-align: left
+                    @include media(540)
+                        text-align: center
                     h6
                         font-size: 18px
                         font-weight: 600
@@ -68,6 +72,8 @@
                         align-items: center
                         gap: 7px
                         font-weight: 700
+                        @include media(540)
+                            justify-content: center
                         svg
                             transition: .5s ease
                         &:hover
@@ -101,7 +107,7 @@
                 @include media(768)
                     padding: 40px 0 50px
                 @include media(540)
-                    padding: 40px 0 
+                    padding: 20px 0 30px
                 .swiper-slide
                     .process-wrap
                         position: relative

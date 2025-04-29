@@ -515,7 +515,7 @@ footer
             padding: 40px 25px 50px
             gap: 25px
         @include media(540)
-            padding: 30px 20px 40px
+            padding: 30px 0px 40px
         .colA
             flex: 0 1 20%
             @include media(540)
@@ -534,9 +534,15 @@ footer
             @include media(540)
                 padding: 0
                 flex-direction: column
-                gap: 10px
+                gap: 25px
             .list
                 flex: 1
+                @include media(540)
+                    padding: 0 20px
+                &:first-child
+                    @include media(540)
+                        border-bottom: 1px solid $black
+                        padding-bottom: 30px
                 h6
                     font-size: 18px
                     line-height: 1.2
@@ -546,6 +552,11 @@ footer
                     &.connect
                         li
                             margin-bottom: 15px
+                    &:not(.connect)
+                        @include media(540)
+                            display: grid
+                            grid-template-columns: repeat(2, 1fr)
+                        
                     >li
                         display: flex
                         gap: 10px

@@ -58,6 +58,11 @@
     padding: 0 25px 0;
   }
 }
+@media only screen and (max-width: 540px) {
+  .home-secA .flex .colA {
+    text-align: center;
+  }
+}
 .home-secA .flex .colA h2 {
   font-size: 48px;
   line-height: 55px;

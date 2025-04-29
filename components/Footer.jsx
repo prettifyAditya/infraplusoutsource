@@ -9,34 +9,38 @@ import CareerPop from "./CareerPop"
 import FooterStrip from "./FooterStrip"
 
 export default function Footer() {
-    useEffect(() => {
-        const dropdowns = document.querySelectorAll('.hasDropdown');
-      
-        dropdowns.forEach(list => {
-          list.addEventListener('click', () => {
-            const allMenus = document.querySelectorAll('.footer-dropdown-menu');
-            const icon = document.querySelectorAll('.plus-icon')
-            
-            allMenus.forEach(menu => {
-                menu.classList.toggle('active')
-            })
-            icon.forEach(icons => {
-                icons.classList.toggle('active')
-            })
-          });
+  useEffect(() => {
+    const dropdowns = document.querySelectorAll('.hasDropdown');
+  
+    const handler = (e) => {
+      const list = e.currentTarget;
+  
+      if (window.innerWidth < 541) {
+        const menuItem = list.querySelector('.footer-dropdown-menu');
+        const menuIcon = list.querySelector('.plus-icon');
+  
+        document.querySelectorAll('.footer-dropdown-menu').forEach(m => m.classList.remove('active'));
+        document.querySelectorAll('.plus-icon').forEach(i => i.classList.remove('active'));
+  
+        menuItem.classList.add('active');
+        menuIcon.classList.add('active');
+      } else {
+        document.querySelectorAll('.footer-dropdown-menu').forEach(menu => {
+          menu.classList.toggle('active');
         });
-      
-        return () => {
-            dropdowns.forEach(list => {
-              list.removeEventListener('click', () => {
-                const allMenus = document.querySelectorAll('.footer-dropdown-menu');
-                allMenus.forEach(menu => {
-                  menu.classList.toggle('active');
-                });
-              });
-            });
-          };
-      }, []);
+        document.querySelectorAll('.plus-icon').forEach(icon => {
+          icon.classList.toggle('active');
+        });
+      }
+    };
+  
+    dropdowns.forEach(list => list.addEventListener('click', handler));
+  
+    return () => {
+      dropdowns.forEach(list => list.removeEventListener('click', handler));
+    };
+  }, []);
+  
     return (
       <>
         <footer>
