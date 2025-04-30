@@ -161,7 +161,7 @@ export default function Career() {
                     </div>
                     <div className="colB">
                         <p>At Infraoutsource, we value diversity and believe in equal opportunities for everyone. We focus on continuous learning to help people grow as strategic thinkers. Our training programs are designed to guide everyone toward success and encourage them to contribute to our exciting journey together.</p>
-                        <a href=".career-secD" className="btn">
+                        <a href="javascript:;" data-scrollto="#currentOpenings" className="btn">
                             Current Openings
                         </a>
                     </div>
@@ -309,7 +309,7 @@ export default function Career() {
                     </div>
                 </div>
             </div>
-            <div className="career-secD">
+            <div className="career-secD" id="currentOpenings">
                 <div className="container sec-padd-all flex">
                     <div className="colA">
                         <h2>Current Openings</h2>
