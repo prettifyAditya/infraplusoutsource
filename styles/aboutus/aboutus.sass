@@ -12,17 +12,27 @@
         z-index: 1
     &::after
         bottom: 40px
+        @include media(540)
+            display: none
     &::before
         top: 0
     .banner-container
         padding-bottom: 40px
+        @include media(1300)
+            padding: 0 0 40px
+        @include media(540)
+            padding: 0
         .caseStudy_banner
             &::before
                 background: linear-gradient(180deg, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0.6) 100%)
             .bg
                 height: calc( 90vh - var(--headerheight) )
+                @include media(540)
+                    height: 320px
             .banner-wrapper
                 .heading
+                    @include media(540)
+                        padding: 0 20px
                     h2, p
                         color: $white
                     p
@@ -35,6 +45,14 @@
         .colA
             h1
                 padding-bottom: 30px
+                @include media(991)
+                    font-size: 50px
+                @include media(768)
+                    font-size: 40px
+                    padding-bottom: 20px
+                @include media(540)
+                    font-size: 30px
+                    padding-bottom: 15px
             .content
                 p
                     padding-bottom: 15px
@@ -44,25 +62,43 @@
 .about-secA
     .container
         border-bottom: 1px solid $black
+        @include media(991)
+            padding: 0
+        @include media(768)
+            flex-direction: column
         .colA, .colB
             flex: 1
             padding: 70px 50px
             text-align: center
+            @include media(991)
+                padding: 60px 50px
+            @include media(540) 
+                padding: 30px 15px
             .icon
                 width: 80px
                 height: 80px
                 margin: 0 auto 20px
+                @include media(540) 
+                    width: 50px 
+                    height: 50px
+                    margin: 0 auto 10px
                 img
                     height: 100%
             h5
                 font-size: 36px
                 font-weight: 700
                 padding-bottom: 20px
+                @include media(540) 
+                    font-size: 26px 
+                    padding-bottom: 10px
             p
                 max-width: 450px
                 margin: 0 auto
         .colA
             border-right: 1px solid $black
+            @include media(768)
+                border-right: none
+                border-bottom: 1px solid $black
 
 .about-secB
     .container
@@ -73,9 +109,20 @@
         .content-wrapper
             padding: 40px 0 
             gap: 60px
+            @include media(991)
+                flex-direction: column
+                align-items: center
+                gap: 30px
+                padding: 40px 0 0 
+            @include media(540) 
+                padding: 30px 0 0
             figure
                 flex: 0 1 auto
                 line-height: 0
+                @include media(768) 
+                    width: 100%
+                img
+                    height: 100%
             figcaption
                 flex: 1
                 padding: 0 10px 0 0 

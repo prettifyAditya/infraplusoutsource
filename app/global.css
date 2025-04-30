@@ -430,11 +430,13 @@
 @media only screen and (max-width: 768px) {
   :root {
     --headerpadding: 25px;
+    height: 100px;
   }
 }
 @media only screen and (max-width: 540px) {
   :root {
     --headerpadding: 5px;
+    --headerheight: 70px;
   }
 }
 @media only screen and (max-width: 768px) {

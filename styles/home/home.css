@@ -437,7 +437,8 @@
 }
 @media only screen and (max-width: 540px) {
   .home-secD .container .colA .counter-wrapper {
-    gap: 25px;
+    gap: 15px;
+    padding: 20px 0 0;
   }
 }
 .home-secD .container .colA .counter-wrapper .counter-info-wrap h5 {
