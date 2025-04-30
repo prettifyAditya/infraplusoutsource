@@ -144,6 +144,11 @@
 .contact-secB .flex {
   border-bottom: 1px solid var(--black);
 }
+@media only screen and (max-width: 1300px) {
+  .contact-secB .flex {
+    padding: 0;
+  }
+}
 .contact-secB .flex .contact-col {
   flex: 1;
   padding: 30px 30px 40px;
@@ -156,16 +161,50 @@
 .contact-secB .flex .contact-col:not(:last-child) {
   border-right: 1px solid var(--black);
 }
+@media only screen and (max-width: 768px) {
+  .contact-secB .flex .contact-col:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid var(--black);
+    padding: 30px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .contact-secB .flex .contact-col:not(:last-child) {
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contact-secB .flex .contact-col {
+    width: 100%;
+    flex: 0 1 100%;
+  }
+}
 .contact-secB .flex .contact-col .icon {
   width: 50px;
   height: 50px;
   margin-bottom: 20px;
+}
+.contact-secB .flex .contact-col .icon img {
+  height: 100%;
+}
+@media only screen and (max-width: 540px) {
+  .contact-secB .flex .contact-col .icon {
+    margin-bottom: 15px;
+    width: 40px;
+    height: 40px;
+  }
 }
 .contact-secB .flex .contact-col h6 {
   font-size: 24px;
   line-height: 1.2;
   font-weight: 600;
   padding-bottom: 20px;
+}
+@media only screen and (max-width: 540px) {
+  .contact-secB .flex .contact-col h6 {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
 }
 .contact-secB .flex .contact-col a {
   font-size: 16px;
@@ -176,13 +215,34 @@
   margin-bottom: 30px;
   transition: 0.5s ease;
 }
+@media only screen and (max-width: 540px) {
+  .contact-secB .flex .contact-col a {
+    margin-bottom: 20px;
+  }
+}
 .contact-secB .flex .contact-col a:hover {
   color: var(--black);
+}
+.contact-secB .flex .contact-col .btn-btn span {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 500;
 }
 
 .contact-secC .container {
   border-bottom: 1px solid var(--black);
+  line-height: 1;
+}
+@media only screen and (max-width: 1300px) {
+  .contact-secC .container {
+    padding: 0;
+  }
 }
 .contact-secC .container iframe {
   filter: grayscale(1);
+}
+@media only screen and (max-width: 540px) {
+  .contact-secC .container iframe {
+    height: 400px;
+  }
 }/*# sourceMappingURL=contact.css.map */

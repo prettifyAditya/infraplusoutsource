@@ -3206,7 +3206,7 @@ footer .bottom-footer .pret a img {
   padding: 10px 40px;
   color: var(--black);
   display: block;
-  font-weight: 500;
+  font-weight: 600;
 }
 @media only screen and (max-width: 1366px) {
   .ham-pop .model-body .nav-list > li > a {

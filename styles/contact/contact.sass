@@ -91,6 +91,8 @@
 .contact-secB
     .flex
         border-bottom: 1px solid $black
+        @include media(1300)
+            padding: 0
         .contact-col
             flex: 1
             padding: 30px 30px 40px
@@ -101,15 +103,33 @@
             align-items: center
             &:not(:last-child)
                 border-right: 1px solid $black
+                @include media(768)
+                    border-right: none
+                    border-bottom: 1px solid $black
+                    padding: 30px
+                @include media(540)
+                    padding: 20px
+            @include media(768)
+                width: 100%
+                flex: 0 1 100%
             .icon
                 width: 50px
                 height: 50px
                 margin-bottom: 20px
+                img
+                    height: 100%
+                @include media(540)
+                    margin-bottom: 15px
+                    width: 40px
+                    height: 40px
             h6
                 font-size: 24px
                 line-height: 1.2
                 font-weight: 600
                 padding-bottom: 20px
+                @include media(540) 
+                    font-size: 20px
+                    padding-bottom: 10px
             a
                 font-size: 16px
                 line-height: 1.2
@@ -118,11 +138,23 @@
                 max-width: 270px
                 margin-bottom: 30px
                 transition: .5s ease
+                @include media(540) 
+                    margin-bottom: 20px
                 &:hover
                     color: $black
+            .btn-btn
+                span
+                    font-size: 12px
+                    letter-spacing: 1px
+                    font-weight: 500
 
 .contact-secC
     .container
         border-bottom: 1px solid $black
+        line-height: 1
+        @include media(1300)
+            padding: 0
         iframe
             filter: grayscale(1)
+            @include media(540)
+                height: 400px
