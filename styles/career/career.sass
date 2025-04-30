@@ -67,6 +67,8 @@
 .career-secB
     .container
         border-bottom: 1px solid $black
+        @include media(540) 
+            padding-right: 0
         .life-wrapper
             padding-top: 70px
             position: relative
@@ -335,6 +337,15 @@
                             h1,h2,h3,h4,h5,h6,b
                                 color: $black
                                 @include font(500)
+                            h6, strong
+                                @include media(540) 
+                                    font-size: 14px
+                            h6:first-child 
+                                @include media(540) 
+                                    margin: 0
+                            h6:nth-child(2)
+                                @include media(540) 
+                                    margin-top: 0
                             ul
                                 padding-left: 20px
                                 li

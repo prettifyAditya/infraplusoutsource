@@ -118,6 +118,11 @@
 .career-secB .container {
   border-bottom: 1px solid var(--black);
 }
+@media only screen and (max-width: 540px) {
+  .career-secB .container {
+    padding-right: 0;
+  }
+}
 .career-secB .container .life-wrapper {
   padding-top: 70px;
   position: relative;
@@ -512,6 +517,21 @@
 .career-secD .container .colB .current-openings .col article .content-desc h1, .career-secD .container .colB .current-openings .col article .content-desc h2, .career-secD .container .colB .current-openings .col article .content-desc h3, .career-secD .container .colB .current-openings .col article .content-desc h4, .career-secD .container .colB .current-openings .col article .content-desc h5, .career-secD .container .colB .current-openings .col article .content-desc h6, .career-secD .container .colB .current-openings .col article .content-desc b {
   color: var(--black);
   font-weight: 500;
+}
+@media only screen and (max-width: 540px) {
+  .career-secD .container .colB .current-openings .col article .content-desc h6, .career-secD .container .colB .current-openings .col article .content-desc strong {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .career-secD .container .colB .current-openings .col article .content-desc h6:first-child {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .career-secD .container .colB .current-openings .col article .content-desc h6:nth-child(2) {
+    margin-top: 0;
+  }
 }
 .career-secD .container .colB .current-openings .col article .content-desc ul {
   padding-left: 20px;
