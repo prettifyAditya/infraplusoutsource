@@ -6,7 +6,6 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules"
 import { useEffect, useRef,useState } from "react";
 import Image from "next/image"
-import ButtonMain from "../../components/ButtonMain"
 import "../../styles/career/career.css"
 import Link from "next/link";
 
@@ -162,9 +161,9 @@ export default function Career() {
                     </div>
                     <div className="colB">
                         <p>At Infraoutsource, we value diversity and believe in equal opportunities for everyone. We focus on continuous learning to help people grow as strategic thinkers. Our training programs are designed to guide everyone toward success and encourage them to contribute to our exciting journey together.</p>
-                        <button className="btn">
+                        <a href=".career-secD" className="btn">
                             Current Openings
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -267,9 +266,15 @@ export default function Career() {
                                 breakpoints={{
                                         0: {
                                             slidesPerView: 1.2,
+                                            spaceBetween: 20
                                         },
                                         540: {
-                                            slidesPerView: 1.2,
+                                            slidesPerView: 1,
+                                            spaceBetween: 20
+                                        },
+                                        768: {
+                                            slidesPerView: 2,
+                                            spaceBetween: 20
                                         },
                                         991: {
                                             slidesPerView: 2,
@@ -308,7 +313,7 @@ export default function Career() {
                 <div className="container sec-padd-all flex">
                     <div className="colA">
                         <h2>Current Openings</h2>
-                        <ButtonMain onClick={openModel} desc="Apply Now" />
+                        {/* <ButtonMain onClick={openModel} desc="Apply Now" /> */}
                     </div>
                     <div className="colB">
                         <div className="current-openings">

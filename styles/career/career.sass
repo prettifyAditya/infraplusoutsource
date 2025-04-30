@@ -11,15 +11,23 @@
         z-index: 1
     &::after
         bottom: 40px
+        @include media(540) 
+            display: none
     &::before
         top: 0
     .banner-container
         padding-bottom: 40px
+        @include media(1300)
+            padding: 0 0 40px
+        @include media(540)
+            padding: 0
         .career_banner
             &::before
                 background: linear-gradient(180deg, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0.6) 100%)
             .bg
                 height: calc( 90vh - var(--headerheight) )
+                @include media(540)
+                    height: 320px
             .banner-wrapper
                 .heading
                     h2, p
@@ -32,6 +40,9 @@
     border-top: 1px solid $black
     .flex
         border-bottom: 1px solid $black
+        @include media(768)
+            flex-direction: column
+            gap: 20px
         .colA, .colB
             flex: 1
         .colA
@@ -39,11 +50,19 @@
                 font-size: 36px
                 line-height: 1.3
                 max-width: 410px
+                @include media(768)
+                    font-size: 30px
+                @include media(540)
+                    font-size: 24px 
         .colB
             padding: 0 20px
+            @include media(768)
+                padding: 0
             p
                 color: $text
                 margin-bottom: 50px
+                @include media(540) 
+                    margin-bottom: 20px
 
 .career-secB
     .container
@@ -51,6 +70,8 @@
         .life-wrapper
             padding-top: 70px
             position: relative
+            @include media(540) 
+                padding-top: 20px
             .swiper-nav
                 display: flex
                 align-items: center
@@ -59,6 +80,8 @@
                 position: absolute
                 right: 0
                 top: 0
+                @include media(540) 
+                    display: none
                 button
                     display: inline-block
                     width: 40px
@@ -118,9 +141,22 @@
             padding-top: 60px
             gap: 40px
             justify-content: space-around
+            @include media(1024)
+                align-items: center
+                justify-content: center
+                flex-direction: column-reverse
+            @include media(768) 
+                padding-top: 40px
+            @include media(540) 
+                padding-top: 20px
+                gap: 20px
             .colA
                 flex: 1
                 max-width: 750px
+                @include media(1024)
+                    text-align: center
+                @include media(991)
+                    max-width: 100%
                 h6
                     font-size: 20px
                     font-weight: 600
@@ -128,10 +164,15 @@
                     padding-bottom: 10px
                 p
                     max-width: 620px
+                    @include media(1024)
+                        margin: 0 auto
+                        max-width: 480px
                 .work-wrapper
                     position: relative
                     width: 100%
                     padding-top: 50px
+                    @include media(540) 
+                        padding-top: 20px
                     .swiper-nav
                         position: absolute
                         top: 50%
@@ -144,6 +185,11 @@
                         width: 100%
                         max-width: 100%
                         margin: 0 auto
+                        @include media(540) 
+                            display: none
+                        &:hover
+                            button
+                                border-radius: 50%
                         button
                             box-shadow: none
                         .swiper-button-disabled
@@ -158,16 +204,33 @@
                         max-width: calc( 100% - 4rem )
                         margin-right: auto
                         padding: 20px 0 
+                        @include media(768)
+                            padding: 20px 10px
+                        @include media(540) 
+                            max-width: 100%
+                            padding: 10px
                         .swiper-slide
                             .work-col
                                 padding: 30px 20px
                                 text-align: center
                                 border-radius: 10px
                                 box-shadow: 0 4px 12px 0 #00000014
+                                @include media(540) 
+                                    padding: 20px 15px
+                                    min-height: 210px
+                                h6
+                                    @include media(540) 
+                                        padding-bottom: 5px 
                                 .icon
                                     width: 45px
                                     height: 45px
                                     margin: 0 auto 20px
+                                    img
+                                        height: 100%
+                                    @include media(540) 
+                                        width: 35px
+                                        height: 35px
+                                        margin: 0 auto 10px
                                 
             .colB
                 flex: 0 1 auto
@@ -176,8 +239,18 @@
     .container
         background-color: #F5F5F5
         gap: 50px 
+        @include media(768)
+            flex-direction: column
+            gap: 30px
         .colA
             flex: 0 1 auto
+            @include media(991)
+                flex: 0 1 185px
+            @include media(768)
+                flex: 0 1 auto
+            h2
+                @include media(540) 
+                    font-size: 24px
         .colB
             flex: 1
             .current-openings

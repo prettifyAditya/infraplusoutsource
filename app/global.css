@@ -1107,6 +1107,10 @@ button {
   transition-delay: 0s;
 }
 
+a.btn {
+  color: var(--white);
+}
+
 .btn {
   --height: 38px;
   --padding: 24px;

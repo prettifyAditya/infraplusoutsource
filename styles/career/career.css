@@ -27,17 +27,37 @@
 .line::after {
   bottom: 40px;
 }
+@media only screen and (max-width: 540px) {
+  .line::after {
+    display: none;
+  }
+}
 .line::before {
   top: 0;
 }
 .line .banner-container {
   padding-bottom: 40px;
 }
+@media only screen and (max-width: 1300px) {
+  .line .banner-container {
+    padding: 0 0 40px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .line .banner-container {
+    padding: 0;
+  }
+}
 .line .banner-container .career_banner::before {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0.6) 100%);
 }
 .line .banner-container .career_banner .bg {
   height: calc(90vh - var(--headerheight));
+}
+@media only screen and (max-width: 540px) {
+  .line .banner-container .career_banner .bg {
+    height: 320px;
+  }
 }
 .line .banner-container .career_banner .banner-wrapper .heading h2, .line .banner-container .career_banner .banner-wrapper .heading p {
   color: var(--white);
@@ -53,6 +73,12 @@
 .career-secA .flex {
   border-bottom: 1px solid var(--black);
 }
+@media only screen and (max-width: 768px) {
+  .career-secA .flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .career-secA .flex .colA, .career-secA .flex .colB {
   flex: 1;
 }
@@ -61,12 +87,32 @@
   line-height: 1.3;
   max-width: 410px;
 }
+@media only screen and (max-width: 768px) {
+  .career-secA .flex .colA h2 {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .career-secA .flex .colA h2 {
+    font-size: 24px;
+  }
+}
 .career-secA .flex .colB {
   padding: 0 20px;
+}
+@media only screen and (max-width: 768px) {
+  .career-secA .flex .colB {
+    padding: 0;
+  }
 }
 .career-secA .flex .colB p {
   color: var(--text);
   margin-bottom: 50px;
+}
+@media only screen and (max-width: 540px) {
+  .career-secA .flex .colB p {
+    margin-bottom: 20px;
+  }
 }
 
 .career-secB .container {
@@ -76,6 +122,11 @@
   padding-top: 70px;
   position: relative;
 }
+@media only screen and (max-width: 540px) {
+  .career-secB .container .life-wrapper {
+    padding-top: 20px;
+  }
+}
 .career-secB .container .life-wrapper .swiper-nav {
   display: flex;
   align-items: center;
@@ -84,6 +135,11 @@
   position: absolute;
   right: 0;
   top: 0;
+}
+@media only screen and (max-width: 540px) {
+  .career-secB .container .life-wrapper .swiper-nav {
+    display: none;
+  }
 }
 .career-secB .container .life-wrapper .swiper-nav button {
   display: inline-block;
@@ -151,9 +207,37 @@
   gap: 40px;
   justify-content: space-around;
 }
+@media only screen and (max-width: 1024px) {
+  .career-secC .container .workHere-wrapper {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .career-secC .container .workHere-wrapper {
+    padding-top: 40px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .career-secC .container .workHere-wrapper {
+    padding-top: 20px;
+    gap: 20px;
+  }
+}
 .career-secC .container .workHere-wrapper .colA {
   flex: 1;
   max-width: 750px;
+}
+@media only screen and (max-width: 1024px) {
+  .career-secC .container .workHere-wrapper .colA {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .career-secC .container .workHere-wrapper .colA {
+    max-width: 100%;
+  }
 }
 .career-secC .container .workHere-wrapper .colA h6 {
   font-size: 20px;
@@ -164,10 +248,21 @@
 .career-secC .container .workHere-wrapper .colA p {
   max-width: 620px;
 }
+@media only screen and (max-width: 1024px) {
+  .career-secC .container .workHere-wrapper .colA p {
+    margin: 0 auto;
+    max-width: 480px;
+  }
+}
 .career-secC .container .workHere-wrapper .colA .work-wrapper {
   position: relative;
   width: 100%;
   padding-top: 50px;
+}
+@media only screen and (max-width: 540px) {
+  .career-secC .container .workHere-wrapper .colA .work-wrapper {
+    padding-top: 20px;
+  }
 }
 .career-secC .container .workHere-wrapper .colA .work-wrapper .swiper-nav {
   position: absolute;
@@ -181,6 +276,14 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
+}
+@media only screen and (max-width: 540px) {
+  .career-secC .container .workHere-wrapper .colA .work-wrapper .swiper-nav {
+    display: none;
+  }
+}
+.career-secC .container .workHere-wrapper .colA .work-wrapper .swiper-nav:hover button {
+  border-radius: 50%;
 }
 .career-secC .container .workHere-wrapper .colA .work-wrapper .swiper-nav button {
   box-shadow: none;
@@ -201,16 +304,48 @@
   margin-right: auto;
   padding: 20px 0;
 }
+@media only screen and (max-width: 768px) {
+  .career-secC .container .workHere-wrapper .colA .work-wrapper .work-slider {
+    padding: 20px 10px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .career-secC .container .workHere-wrapper .colA .work-wrapper .work-slider {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
 .career-secC .container .workHere-wrapper .colA .work-wrapper .work-slider .swiper-slide .work-col {
   padding: 30px 20px;
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.0784313725);
 }
+@media only screen and (max-width: 540px) {
+  .career-secC .container .workHere-wrapper .colA .work-wrapper .work-slider .swiper-slide .work-col {
+    padding: 20px 15px;
+    min-height: 210px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .career-secC .container .workHere-wrapper .colA .work-wrapper .work-slider .swiper-slide .work-col h6 {
+    padding-bottom: 5px;
+  }
+}
 .career-secC .container .workHere-wrapper .colA .work-wrapper .work-slider .swiper-slide .work-col .icon {
   width: 45px;
   height: 45px;
   margin: 0 auto 20px;
+}
+.career-secC .container .workHere-wrapper .colA .work-wrapper .work-slider .swiper-slide .work-col .icon img {
+  height: 100%;
+}
+@media only screen and (max-width: 540px) {
+  .career-secC .container .workHere-wrapper .colA .work-wrapper .work-slider .swiper-slide .work-col .icon {
+    width: 35px;
+    height: 35px;
+    margin: 0 auto 10px;
+  }
 }
 .career-secC .container .workHere-wrapper .colB {
   flex: 0 1 auto;
@@ -220,8 +355,29 @@
   background-color: #F5F5F5;
   gap: 50px;
 }
+@media only screen and (max-width: 768px) {
+  .career-secD .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
 .career-secD .container .colA {
   flex: 0 1 auto;
+}
+@media only screen and (max-width: 991px) {
+  .career-secD .container .colA {
+    flex: 0 1 185px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .career-secD .container .colA {
+    flex: 0 1 auto;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .career-secD .container .colA h2 {
+    font-size: 24px;
+  }
 }
 .career-secD .container .colB {
   flex: 1;
