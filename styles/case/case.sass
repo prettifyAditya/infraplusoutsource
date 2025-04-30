@@ -82,15 +82,27 @@
         top: 0
 .banner-container
     padding-bottom: 40px
+    @include media(991)
+        padding: 0 0 40px
 .caseStudy_banner.banner
     &::before
         background: linear-gradient(267deg, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0.95) 100%)
+        @include media(768)
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.95) 100%)
     .bg
         height: calc( 90vh - var(--headerheight) )
         overflow-x: hidden
+        @include media(540)
+            height: 320px
     .banner-wrapper
         padding-left: 40px
+        @include media(768)
+            padding: 0 15px
+        @include media(540)
+            bottom: 10%
         .heading
+            @include media(768)
+                text-align: center
             h2
                 max-width: 660px
                 font-size: 36px
@@ -98,6 +110,12 @@
                 font-weight: 700
                 color: $white
                 margin-bottom: 50px
+                @include media(768)
+                    font-size: 30px
+                    margin-bottom: 40px
+                @include media(540)
+                    font-size: 18px
+                    margin-bottom: 20px
 
 .caseStudy-secA
     border-top: 1px solid $black
@@ -155,9 +173,15 @@
 .caseStudy-secC
     .container
         border-bottom: 1px solid $black
+        @include media(768)
+            padding-right: 0
         .case-wrapper
             padding-top: 80px
             position: relative
+            @include media(768)
+                padding-top: 40px
+            @include media(540)
+                padding-top: 30px
             .swiper-nav
                 display: flex
                 align-items: center
@@ -166,6 +190,8 @@
                 position: absolute
                 right: 0
                 top: 0
+                @include media(768)
+                    display: none
                 button
                     display: inline-block
                     width: 40px
@@ -176,6 +202,11 @@
                         vertical-align: middle
                         width: 30px
                         height: 30px
+            .case-col
+                figcaption
+                    h6
+                        @include media(540)
+                            font-size: 14px
 
 .case-col
     cursor: pointer
@@ -203,3 +234,6 @@
 .caseFilter__single, .caseFilter__value-container
     @include media(540)
         font-size: 14px !important
+.css-b62m3t-container
+    @include media(540)
+        width: 100%

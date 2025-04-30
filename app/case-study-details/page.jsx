@@ -150,7 +150,10 @@ export default function CaseStudy() {
                                     slidesPerView: 1.2,
                                 },
                                 540: {
-                                    slidesPerView: 2.2,
+                                    slidesPerView: 1.2,
+                                },
+                                675: {
+                                    slidesPerView: 2.2
                                 },
                                 991: {
                                     slidesPerView: 3,
