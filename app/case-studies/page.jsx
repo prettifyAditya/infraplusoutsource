@@ -11,7 +11,7 @@ const customStyles = {
     control: (base, state) => ({
         ...base,
         height: "100%",
-        padding: "5px 30px",
+        padding: "5px 10px",
         borderRadius: "25px",
         border: '1px solid #000',
         backgroundColor: "none",
@@ -46,7 +46,7 @@ const customStyles = {
         background: state.isFocused ? "var(--gradient-a)" : "#fff",
         marginBottom: "5px",
         fontSize: "16px",
-        padding: "20px 10px",
+        padding: "5px 10px",
         color: state.isFocused ? "#fff" : "#000",
         "&:hover": {
           borderColor: "#000",
@@ -57,9 +57,14 @@ const customStyles = {
     ...base,
     zIndex: 100,
     }),
-    indicatorsContainer: (base, state) => ({
+    indicatorsContainer: (base) => ({
         ...base,
-        padding: state.isFocused ? "0" : "0",
+        // padding: state.isFocused ? "0" : "0",
+        padding: "0",
+    }),
+    dropdownIndicator: (base) => ({
+        ...base,
+        padding: "0",
     })
 }
 
@@ -127,6 +132,7 @@ export default function CaseStudy() {
                     <div className="top-nav">
                         <h6>Filter by categories</h6>
                         <Select 
+                        classNamePrefix="caseFilter"
                         placeholder="Category"
                         options={options}
                         value={selectedOption}

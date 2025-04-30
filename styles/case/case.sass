@@ -4,6 +4,8 @@
     .container
         border-bottom: 1px solid $black
         padding-bottom: 50px 
+        @include media(540)
+            padding-bottom: 30px
         .heading
             max-width: 500px
             margin: 0 auto
@@ -18,6 +20,9 @@
             align-items: center
             justify-content: center
             gap: 20px
+            @include media(540)
+                flex-direction: column
+                gap: 10px
             h6
                 font-size: 16px
                 color: $text
@@ -25,8 +30,14 @@
                 display: none
         .casestudies_wrapper
             padding: 50px 0 
+            @include media(768)
+                padding: 40px 0
             .case-grid
                 grid-gap: 20px
+                @include media(991)
+                    grid-template-columns: repeat(2, 1fr)
+                @include media(768)
+                    grid-template-columns: repeat(1, 1fr)
                 .case-col
                     cursor: pointer
                     transition: 1s ease
@@ -46,6 +57,10 @@
                             line-height: 1.2
                             font-weight: 800
                             color: $white
+                            @include media(768)
+                                font-size: 16px
+                            @include media(540)
+                                font-size: 14px
             .btn-wrapper
                 padding-top: 50px
 
@@ -181,3 +196,10 @@
             line-height: 1.2
             font-weight: 800
             color: $white
+
+.caseFilter__control
+    @include media(540)
+        padding: 0 5px !important
+.caseFilter__single, .caseFilter__value-container
+    @include media(540)
+        font-size: 14px !important

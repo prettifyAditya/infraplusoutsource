@@ -16,6 +16,11 @@
   border-bottom: 1px solid var(--black);
   padding-bottom: 50px;
 }
+@media only screen and (max-width: 540px) {
+  .case-secA .container {
+    padding-bottom: 30px;
+  }
+}
 .case-secA .container .heading {
   max-width: 500px;
   margin: 0 auto;
@@ -33,6 +38,12 @@
   justify-content: center;
   gap: 20px;
 }
+@media only screen and (max-width: 540px) {
+  .case-secB .container .top-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 .case-secB .container .top-nav h6 {
   font-size: 16px;
   color: var(--text);
@@ -43,8 +54,23 @@
 .case-secB .container .casestudies_wrapper {
   padding: 50px 0;
 }
+@media only screen and (max-width: 768px) {
+  .case-secB .container .casestudies_wrapper {
+    padding: 40px 0;
+  }
+}
 .case-secB .container .casestudies_wrapper .case-grid {
   grid-gap: 20px;
+}
+@media only screen and (max-width: 991px) {
+  .case-secB .container .casestudies_wrapper .case-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .case-secB .container .casestudies_wrapper .case-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 .case-secB .container .casestudies_wrapper .case-grid .case-col {
   cursor: pointer;
@@ -71,6 +97,16 @@
   line-height: 1.2;
   font-weight: 800;
   color: var(--white);
+}
+@media only screen and (max-width: 768px) {
+  .case-secB .container .casestudies_wrapper .case-grid .case-col figcaption h6 {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .case-secB .container .casestudies_wrapper .case-grid .case-col figcaption h6 {
+    font-size: 14px;
+  }
 }
 .case-secB .container .casestudies_wrapper .btn-wrapper {
   padding-top: 50px;
@@ -257,4 +293,16 @@
   line-height: 1.2;
   font-weight: 800;
   color: var(--white);
+}
+
+@media only screen and (max-width: 540px) {
+  .caseFilter__control {
+    padding: 0 5px !important;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .caseFilter__single, .caseFilter__value-container {
+    font-size: 14px !important;
+  }
 }/*# sourceMappingURL=case.css.map */
