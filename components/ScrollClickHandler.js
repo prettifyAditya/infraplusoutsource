@@ -18,5 +18,5 @@ export default function ScrollClickHandler() {
     return () => document.removeEventListener('click', handleClick);
   }, []);
 
-  return null; // Invisible helper component
+  return null; 
 }
