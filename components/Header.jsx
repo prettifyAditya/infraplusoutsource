@@ -27,7 +27,6 @@ export default function Header() {
     }, []) 
     useEffect(() => {
         document.querySelectorAll('.header_menu').forEach(dropdown => {
-            console.log(dropdown);
             dropdown.addEventListener('mouseenter', () => {
                 dropdown.classList.add('active')
               // Remove active from all subcat-li & col-sub-menu inside this dropdown only
