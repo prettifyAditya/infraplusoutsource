@@ -26,12 +26,13 @@ export default function Header() {
         return () => window.removeEventListener("scroll", handleScroll);  
     }, []) 
     useEffect(() => {
-        document.querySelectorAll('.hasDropdown').forEach(dropdown => {
+        document.querySelectorAll('.header_menu').forEach(dropdown => {
+            console.log(dropdown);
             dropdown.addEventListener('mouseenter', () => {
+                dropdown.classList.add('active')
               // Remove active from all subcat-li & col-sub-menu inside this dropdown only
               dropdown.querySelectorAll('.subcat-li').forEach(el => el.classList.remove('active'));
               dropdown.querySelectorAll('.col-sub-menu').forEach(el => el.classList.remove('active'));
-          
               // Set active on the first subcat-li & its col-sub-menu
               const firstSubcat = dropdown.querySelector('.subcat-li');
               if (firstSubcat) {
@@ -40,7 +41,11 @@ export default function Header() {
                 if (subMenu) subMenu.classList.add('active');
               }
             });
+            dropdown.addEventListener('mouseleave', ()=> {
+                dropdown.classList.remove('active')
+            })
           });
+
           
           document.querySelectorAll('.subcat-li').forEach(subcatLi => {
             subcatLi.addEventListener('mouseenter', () => {
@@ -56,6 +61,9 @@ export default function Header() {
               const subMenu = subcatLi.querySelector('.col-sub-menu');
               if (subMenu) subMenu.classList.add('active');
             });
+            subcatLi.addEventListener('click', () => {
+                subcatLi.closest('.hasDropdown').classList.remove('active');
+            })
           });
           
           document.querySelectorAll('.subcat-ul').forEach(subcatUl => {
@@ -75,6 +83,12 @@ export default function Header() {
               }
             });
           });
+
+          document.querySelectorAll('.subsubcategory').forEach(subsubCategory => {
+            subsubCategory.addEventListener('click', () => {
+                subsubCategory.closest('.hasDropdown').classList.remove(active);
+            })
+          })
     }, [])
     return(
         <>
@@ -85,7 +99,7 @@ export default function Header() {
                             <Image src="/assets/logo.svg" alt="Infraplus Logo" width="169" height="56"></Image>
                         </Link>
                         <ul className="solutions_ul">
-                            <li className="hasDropdown">
+                            <li className="hasDropdown header_menu">
                                 <Link href="javascript:;" aria-haspopup="true" aria-expanded="false">Engineering Services</Link>
                                 <div className="dropdown-menu" role="menu">
                                     <div className="dropdown-menu-wrap">
